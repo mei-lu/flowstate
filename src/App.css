@@ -1,18 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
 .App {
   text-align: center;
   background-image: url('./img/background.jpg');
-  background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh;
+  height: 100%;
+  width: 100%;
+  position:fixed;
+  font-family: 'Poppins', sans-serif;
 }
 .pomodoro {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 20em;
-  height: 20em;
-  background-color: rgb(197, 200, 230);
+  width: 22em;
+  height: 22em;
+  background-color: rgb(255, 198, 215);
   border-radius: 200px;
   margin: 0 auto;
 }
@@ -34,7 +38,8 @@
 }
 
 .navigation {
-  background-color: rgb(226, 229, 248);
+  background-color: transparent;
+  color: #fff;
 }
 
 .nav-contents {
@@ -51,10 +56,19 @@
   justify-content: space-between;
 }
 
-.logo {
+.logo-wrapper {
   float: left;
-  padding: 2em;
   margin-right: auto;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.2em;
+}
+
+.logo {
+  margin-left: 2em;
+  padding: 0.5em;
+  width: auto;
+  height: 5em;
 }
 
 .level-wrapper {
@@ -95,8 +109,17 @@
 .level-exp {
   font-size: 0.8em;
   text-align: left;
+  padding: 0.2em 0;
 }
 
 .level-bar-exp-wrapper {
   margin-left: 1em;
+}
+
+.start-btn {
+  border: none;
+  outline: none;
+  padding: 10px;
+  border-radius: 40px;
+  background-color: #fff;
 }

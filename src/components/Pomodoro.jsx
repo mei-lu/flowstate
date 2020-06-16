@@ -59,7 +59,11 @@ class Pomodoro extends React.Component {
                 <p>{Math.floor(this.state.minutesPlace)}:{this.state.secondsPlace}</p>
                 <button className='increment-btn' onClick={this.increment}>+</button>
             </div>
-            <button className='start-btn' onClick={this.countdown}>Start</button>
+            {/* Decide button rendering based on timer running */}
+                <button className='start-btn' onClick={this.countdown}>Start</button>
+            
+                <button className='start-btn' onClick={this.countdown}>Pause</button>
+            
         </div>
     }
 }

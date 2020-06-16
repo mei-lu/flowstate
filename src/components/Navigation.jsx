@@ -1,14 +1,18 @@
 import React from 'react';
-
+import Logo from '../img/Logo.png'
 class Navigation extends React.Component {
     render() {
         return <div className='navigation'>
             <div className='nav-contents'>
-                <div className='logo'>Logo</div>
+                <div className='logo-wrapper'>
+                    <img className='logo' src={Logo} alt=''/>
+                    <p>Stationmaster</p>
+                </div>
                 <div className='nav-labels'>
-                    <div>Log</div>
-                    <div>Friends</div>
+                    <div>Dashboard</div>
+                    <div>Station</div>
                     <div>Settings</div>
+                    <div>Hi Mei!</div>
                     <div>Log Out</div>
                 </div>
             </div>
