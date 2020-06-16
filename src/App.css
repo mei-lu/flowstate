@@ -1,0 +1,52 @@
+.App {
+  text-align: center;
+}
+
+.pomodoro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 20em;
+  height: 20em;
+  background-color: rgb(178, 202, 174);
+  border-radius: 200px;
+}
+
+.increment-btn {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: rgb(70, 66, 80);
+}
+
+.timer-settings {
+  display: flex;
+  flex-direction: row;
+}
+
+.navigation {
+  
+  background-color: rgb(196, 200, 255);
+}
+
+.nav-contents {
+  display: flex;
+  flex-direction: row;
+}
+
+.nav-labels {
+  padding: 2em;
+  float: right;
+  width: 30vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.logo {
+  float: left;
+  padding: 2em;
+  margin-right: auto;
+}
