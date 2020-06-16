@@ -17,15 +17,17 @@ class Pomodoro extends React.Component {
     //Decrement timer setting
     decrement() {
         let afterDecrement = this.state.seconds - 300;
-        if (afterDecrement >= 300) this.setState({seconds: afterDecrement, timeSetting: afterDecrement/60});
+        if (afterDecrement >= 300) this.setState({seconds: afterDecrement, timeSetting: afterDecrement/60, minutesPlace: afterDecrement/60});
     }
     //Increment timer setting
     increment() {
         let afterIncrement = this.state.seconds + 300;
-        if (afterIncrement <= 3600) this.setState({seconds: afterIncrement, timeSetting: afterIncrement/60});
+        if (afterIncrement <= 3600) this.setState({seconds: afterIncrement, timeSetting: afterIncrement/60, minutesPlace: afterIncrement/60});
     }
+
     //Start timer
     countdown() {
+
         let runTimer = setInterval(() => {
             //Stop timer
             if (!this.state.timerRunning) {
