@@ -6,7 +6,7 @@ class Navigation extends React.Component {
             <div className='nav-contents'>
                 <div className='logo-wrapper'>
                     <img className='logo' src={Logo} alt=''/>
-                    <p>Stationmaster</p>
+                    <p className='glow'>Stationmaster</p>
                 </div>
                 <div className='nav-labels'>
                     <div>Dashboard</div>

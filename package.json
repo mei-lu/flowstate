@@ -7,9 +7,13 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
+    "mongoose": "^5.9.19",
+    "passport": "^0.4.1",
+    "passport-google-oauth": "^2.0.0",
     "react": "^16.13.1",
     "react-circle-slider": "^1.6.2",
     "react-dom": "^16.13.1",
+    "react-particles-js": "^3.2.1",
     "react-scripts": "3.4.1"
   },
   "scripts": {

@@ -2,13 +2,23 @@
 
 .App {
   text-align: center;
-  background-image: url('./img/background.jpg');
+  /* background-image: url('./img/background.jpg'); */
+  background: linear-gradient(#7891C1, #3F4573 );
   background-size: cover;
   height: 100%;
   width: 100%;
   position:fixed;
   font-family: 'Poppins', sans-serif;
 }
+
+.starsParticles {
+  z-index: -10;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
 .pomodoro {
   display: flex;
   flex-direction: column;
@@ -16,7 +26,7 @@
   justify-content: center;
   width: 22em;
   height: 22em;
-  background-color: rgb(255, 198, 215);
+  background-color: #ACB5D3;
   border-radius: 200px;
   margin: 0 auto;
 }
@@ -74,7 +84,7 @@
 .level-wrapper {
   display: flex;
   flex-direction: column;
-  background-color: rgb(255, 189, 200);
+  background-color: #ACB5D3;
   width: fit-content;
   padding: 1.5em;
   border-radius: 20px;
@@ -122,4 +132,21 @@
   padding: 10px;
   border-radius: 40px;
   background-color: #fff;
+}
+
+.glow {
+  animation: shine 2s forwards, blink 10s 1s infinite;
+}
+
+@keyframes shine {
+  0% {
+    color: #ad456f;
+    text-shadow: none;
+  }
+  100% {
+    color: #ffe6ff;
+    text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #ff65bd,
+      -0.2rem 0.1rem 1rem #ff65bd, 0.2rem 0.1rem 1rem #ff65bd,
+      0 -0.5rem 2rem #ff2f2f, 0 0.5rem 3rem #ff2483;
+  }
 }
