@@ -1,4 +1,7 @@
-import React from 'react'
+import React from 'react';
+import Play from '../img/play.svg';
+import Pause from '../img/pause.svg';
+import Stop from '../img/stop.svg'
 
 class Pomodoro extends React.Component {
     constructor(props) {
@@ -8,7 +11,8 @@ class Pomodoro extends React.Component {
             seconds: 300, //For splitting minutes and seconds from total seconds
             minutesPlace: 5,
             secondsPlace: '00',
-            timerRunning: false
+            timerRunning: false,
+            cycleDone: true
         }
         this.increment = this.increment.bind(this);
         this.decrement = this.decrement.bind(this);
@@ -21,11 +25,11 @@ class Pomodoro extends React.Component {
     //Decide button rendering
     decideButton() {
         if (!this.state.timerRunning) {
-            return <button className='start-btn' onClick={this.countdown}>Start</button>
+            return <button className='start-btn' onClick={this.countdown}><img src={Play} alt=''></img></button>
         } else {
             return <div>
-                <button className='start-btn' onClick={this.pause}>Pause</button>
-                <button className='start-btn' onClick={this.resetTimer}>Cancel</button>
+                <button className='start-btn' onClick={this.pause}><img src={Pause} alt=''></img></button>
+                <button className='start-btn' onClick={this.resetTimer}><img src={Stop} alt=''></img></button>
             </div>
         }
     }
@@ -43,7 +47,8 @@ class Pomodoro extends React.Component {
 
     //Reset timer
     resetTimer() {
-        this.setState({timerRunning: false, minutesPlace: this.state.timeSetting, secondsPlace: '00'});
+        this.setState({timerRunning: false, minutesPlace: this.state.timeSetting, secondsPlace: '00', seconds: this.state.timeSetting * 60});
+        this.setState({cycleDone: true});
     }
 
     //Pause timer
@@ -54,6 +59,7 @@ class Pomodoro extends React.Component {
     //Start timer
     countdown() {
         this.setState({timerRunning: true});
+        this.setState({cycleDone: false});
         let runTimer = setInterval(() => {
             //Stop timer
             if (!this.state.timerRunning) {
@@ -81,9 +87,9 @@ class Pomodoro extends React.Component {
     render() {
         return <div className='pomodoro'>
             <div className='timer-settings'>
-                <button className='increment-btn glow' onClick={this.decrement}>-</button>
+                {this.state.cycleDone ? <button className='increment-btn' onClick={this.decrement}>-</button> : null}
                 <p>{Math.floor(this.state.minutesPlace)}:{this.state.secondsPlace}</p>
-                <button className='increment-btn glow' onClick={this.increment}>+</button>
+                {this.state.cycleDone ? <button className='increment-btn' onClick={this.increment}>+</button> : null}
             </div>
             {/* Decide button rendering based on timer running */}
             {this.decideButton()}

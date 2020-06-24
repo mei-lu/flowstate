@@ -1,8 +1,8 @@
 import React from 'react';
 import Particles from 'react-particles-js';
-
 const StarrySky = () => {
     return (
+        <div>
         <Particles
         width={document.width}
         height={document.height}
@@ -48,6 +48,7 @@ const StarrySky = () => {
           }}
           className='starsParticles'
       />
+      </div>
     );
 }
 

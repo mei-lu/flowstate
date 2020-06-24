@@ -2,13 +2,18 @@
 
 .App {
   text-align: center;
-  /* background-image: url('./img/background.jpg'); */
   background: linear-gradient(#7891C1, #3F4573 );
   background-size: cover;
   height: 100%;
   width: 100%;
   position:fixed;
   font-family: 'Poppins', sans-serif;
+  color: #fff;
+}
+
+.Contents {
+  display: flex;
+  flex-direction: column;
 }
 
 .starsParticles {
@@ -26,7 +31,7 @@
   justify-content: center;
   width: 22em;
   height: 22em;
-  background-color: #ACB5D3;
+  background-color: #acb5d3be;
   border-radius: 200px;
   margin: 0 auto;
 }
@@ -45,6 +50,7 @@
   display: flex;
   flex-direction: row;
   font-size: 3em;
+  color: #fff;
 }
 
 .navigation {
@@ -72,23 +78,29 @@
   display: flex;
   align-items: center;
   letter-spacing: 0.2em;
+  margin-left: 2em;
 }
 
 .logo {
-  margin-left: 2em;
   padding: 0.5em;
   width: auto;
-  height: 5em;
+  height: 3.5em;
+}
+
+.logo-text {
+  margin-left: 1.5em;
 }
 
 .level-wrapper {
+  float: right;
   display: flex;
   flex-direction: column;
-  background-color: #ACB5D3;
   width: fit-content;
   padding: 1.5em;
   border-radius: 20px;
   margin: 1em;
+  text-align: left;
+  font-size: 0.8em;
 }
 
 .level-bar {
@@ -97,33 +109,21 @@
   background-color: #fff;
   border-radius: 10px;
   border-width: 1px;
-  border-color: black;
-  border-style: solid;
   overflow: hidden;
 }
 
 .level-prog {
+  top: 0;
+  left: 0;
   background-color: rgb(255, 149, 164);
   border-radius: 10px;
   width: 4em;
-  height: 1em;
+  height: 0.8em;
 }
 
-.level-prog-wrapper {
+.level-user {
   display: flex;
-  flex-direction: row;
-  font-size: 0.9em;
-  align-items: center;
-}
-
-.level-exp {
-  font-size: 0.8em;
-  text-align: left;
-  padding: 0.2em 0;
-}
-
-.level-bar-exp-wrapper {
-  margin-left: 1em;
+  justify-content: space-between;
 }
 
 .start-btn {
@@ -131,7 +131,7 @@
   outline: none;
   padding: 10px;
   border-radius: 40px;
-  background-color: #fff;
+  background-color: transparent;
 }
 
 .glow {
