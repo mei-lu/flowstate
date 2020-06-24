@@ -6,14 +6,17 @@
   background-size: cover;
   height: 100%;
   width: 100%;
-  position:fixed;
+  position: fixed;
   font-family: 'Poppins', sans-serif;
   color: #fff;
 }
 
 .Contents {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  width: 100vw;
 }
 
 .starsParticles {
@@ -33,7 +36,6 @@
   height: 22em;
   background-color: #acb5d3be;
   border-radius: 200px;
-  margin: 0 auto;
 }
 
 .increment-btn {
@@ -56,6 +58,8 @@
 .navigation {
   background-color: transparent;
   color: #fff;
+  display: flex;
+  justify-content: space-between;
 }
 
 .nav-contents {
@@ -66,29 +70,24 @@
 .nav-labels {
   padding: 2em;
   float: right;
-  width: 30vw;
+  width: 20vw;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
-.logo-wrapper {
-  float: left;
-  margin-right: auto;
-  display: flex;
-  align-items: center;
-  letter-spacing: 0.2em;
-  margin-left: 2em;
-}
-
 .logo {
-  padding: 0.5em;
-  width: auto;
-  height: 3.5em;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  margin: 0 auto;
+  width: 100vw;
+  padding: 1rem;
 }
 
-.logo-text {
-  margin-left: 1.5em;
+.logo-img {
+  width: 4rem;
+  margin: 0 auto;
 }
 
 .level-wrapper {
