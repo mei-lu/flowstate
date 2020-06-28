@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import {Router} from '@reach/router';
 import Pomodoro from './pages/Pomodoro';
+import Login from './pages/Login';
 import Logo from './components/Logo';
 import Navigation from './components/Navigation';
 import StarrySky from './components/StarrySky';
@@ -15,6 +16,7 @@ function App() {
         <Router>
         <Pomodoro path='/'/>
         {/* <Dashboard path='/dashboard'/> */}
+        <Login path='/login'/>
       </Router>
         </div>
       <StarrySky />

@@ -12,8 +12,7 @@
 }
 
 a {
-  text-decoration: none;
-  color: #fff;
+  color: rgb(255, 149, 164);
 }
 
 .Contents {
@@ -79,6 +78,11 @@ a {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+
+.nav-labels a {
+  text-decoration: none;
+  color: #fff;
 }
 
 .logo {
@@ -154,4 +158,40 @@ a {
       -0.2rem 0.1rem 1rem #ff65bd, 0.2rem 0.1rem 1rem #ff65bd,
       0 -0.5rem 2rem #ff2f2f, 0 0.5rem 3rem #ff2483;
   }
+}
+
+/* Login Page */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login-field {
+  border-radius: 5px;
+  margin: .5em;
+  padding: 1em;
+  outline: none;
+  border: none;
+  width: 20em;
+  color: #3F4573;
+  font-family: 'Poppins', sans-serif;
+}
+
+::placeholder {
+  color: #3F4573;
+  font-family: 'Poppins', sans-serif;
+}
+
+.login-button {
+  border-radius: 50px;
+  width: fit-content;
+  margin: 1em;
+  padding: .8em 3em;
+  outline: none;
+  border: none;
+  background-color: rgb(255, 149, 164);
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  font-size: .9em;
 }
