@@ -11,6 +11,11 @@
   color: #fff;
 }
 
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
 .Contents {
   display: flex;
   justify-content: center;
@@ -77,12 +82,13 @@
 }
 
 .logo {
+  z-index: -999;
+  width: 100vw;
   display: flex;
   flex-direction: column;
-  position: fixed;
-  margin: 0 auto;
-  width: 100vw;
+  position: absolute;
   padding-top: 1.5rem;
+  top: 0;
 }
 
 .logo-img {
