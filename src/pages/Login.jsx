@@ -5,7 +5,7 @@ import {gsap} from 'gsap';
 class Login extends React.Component{
     componentDidMount() {
         let timeline = gsap.timeline();
-        timeline.from(this.headingRef, .5, {y: -100, ease: 'power3', opacity: 0});
+        timeline.from(this.headingRef, .5, {y: -50, ease: 'power3', opacity: 0});
         timeline.from(this.loginRef, .5, {opacity: 0}, '-=.5')
     }
     render() {

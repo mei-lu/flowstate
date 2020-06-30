@@ -32,6 +32,7 @@ class Pomodoro extends React.Component {
         if (!this.state.timerRunning) {
             return <button className='start-btn' onClick={this.countdown}><img src={Play} alt=''></img></button>
         } else {
+            gsap.to(this.settingRef, 1, {x: 10});
             return <div>
                 <button className='start-btn' onClick={this.pause}><img src={Pause} alt=''></img></button>
                 <button className='start-btn' onClick={this.resetTimer}><img src={Stop} alt=''></img></button>
@@ -70,7 +71,6 @@ class Pomodoro extends React.Component {
             if (!this.state.timerRunning) {
                 clearInterval(runTimer);
             }
-
             //Run timer
             if (this.state.timerRunning) {
                 this.setState({seconds: this.state.seconds - 1});
@@ -91,10 +91,10 @@ class Pomodoro extends React.Component {
 
     render() {
         return <div className='pomodoro' ref={element => this.pomoRef = element}>
-            <div className='timer-settings' ref={element => this.settingRef = element}>
-                {this.state.cycleDone ? <button className='increment-btn' onClick={this.decrement}>-</button> : null}
+            <div className='timer-settings'>
+                {this.state.cycleDone ? <button className='increment-btn' onClick={this.decrement} ref={element => this.settingRef = element}>-</button> : null}
                 <p>{Math.floor(this.state.minutesPlace)}:{this.state.secondsPlace}</p>
-                {this.state.cycleDone ? <button className='increment-btn' onClick={this.increment}>+</button> : null}
+                {this.state.cycleDone ? <button className='increment-btn' onClick={this.increment} ref={element => this.settingRef = element}>+</button> : null}
             </div>
             {/* Decide button rendering based on timer running */}
             {this.decideButton()}
