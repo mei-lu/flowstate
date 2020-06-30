@@ -24,7 +24,7 @@ class Pomodoro extends React.Component {
     }
 
     componentDidMount() {
-        gsap.from(this.pomoRef, 1.5, {opacity: 0});
+        gsap.from(this.pomoRef, 1, {opacity: 0});
     }
 
     //Decide button rendering
@@ -90,8 +90,8 @@ class Pomodoro extends React.Component {
     }
 
     render() {
-        return <div className='pomodoro' ref={element => {this.pomoRef = element}}>
-            <div className='timer-settings'>
+        return <div className='pomodoro' ref={element => this.pomoRef = element}>
+            <div className='timer-settings' ref={element => this.settingRef = element}>
                 {this.state.cycleDone ? <button className='increment-btn' onClick={this.decrement}>-</button> : null}
                 <p>{Math.floor(this.state.minutesPlace)}:{this.state.secondsPlace}</p>
                 {this.state.cycleDone ? <button className='increment-btn' onClick={this.increment}>+</button> : null}
