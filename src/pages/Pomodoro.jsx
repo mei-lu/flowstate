@@ -2,6 +2,7 @@ import React from 'react';
 import Play from '../img/play.svg';
 import Pause from '../img/pause.svg';
 import Stop from '../img/stop.svg'
+import {gsap} from 'gsap';
 
 class Pomodoro extends React.Component {
     constructor(props) {
@@ -20,6 +21,10 @@ class Pomodoro extends React.Component {
         this.decideButton = this.decideButton.bind(this);
         this.pause = this.pause.bind(this);
         this.resetTimer = this.resetTimer.bind(this);
+    }
+
+    componentDidMount() {
+        gsap.from(this.pomoRef, 1.5, {opacity: 0});
     }
 
     //Decide button rendering
@@ -85,7 +90,7 @@ class Pomodoro extends React.Component {
     }
 
     render() {
-        return <div className='pomodoro'>
+        return <div className='pomodoro' ref={element => {this.pomoRef = element}}>
             <div className='timer-settings'>
                 {this.state.cycleDone ? <button className='increment-btn' onClick={this.decrement}>-</button> : null}
                 <p>{Math.floor(this.state.minutesPlace)}:{this.state.secondsPlace}</p>
