@@ -16,8 +16,8 @@ module.exports.signUpValidation = signUpValidation;
 
 const loginValidation = (dataBody) => {
     const loginValidationSchema = Joi.object().keys({
-        email: Joi.required(),
-        password: Joi.required(),
+        email: Joi.string().required().email(),
+        password: Joi.string().required(),
     })
     return loginValidationSchema.validate(dataBody);
 }
