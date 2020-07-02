@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const jwt = require('jsonwebtoken');
 const app = express();
 const PORT = process.env.PORT || 5000;
+const path = require('path');
 require('dotenv').config();
 
 // Import routes
@@ -19,5 +20,6 @@ app.use(express.json());
 // Route Middlewares
 app.use('/api/users', authRoute);
 app.use('/api/stats', statsRoute);
+app.use(express.static(path.join(__dirname, 'build')))
 
 app.listen(PORT, () => console.log('Server started~ <3'));
