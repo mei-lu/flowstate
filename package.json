@@ -13,7 +13,7 @@
     "express": "^4.17.1",
     "gsap": "^3.3.4",
     "jsonwebtoken": "^8.5.1",
-    "mongoose": "^5.9.20",
+    "mongoose": "^5.9.21",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-particles-js": "^3.2.1",
