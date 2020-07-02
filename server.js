@@ -7,6 +7,7 @@ require('dotenv').config();
 
 // Import routes
 const authRoute = require('./server/routes/Authentication');
+const statsRoute = require('./server/routes/Stats');
 
 // Connect to DB
 mongoose.connect(process.env.DB_CONNECTION, {useUnifiedTopology: true, useNewUrlParser: true})
@@ -17,5 +18,6 @@ app.use(express.json());
 
 // Route Middlewares
 app.use('/api/users', authRoute);
+app.use('/api/stats', statsRoute);
 
 app.listen(PORT, () => console.log('Server started~ <3'));
