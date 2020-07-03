@@ -20,11 +20,15 @@ app.use(express.json());
 // Route Middlewares
 app.use('/api/users', authRoute);
 app.use('/api/stats', statsRoute);
+<<<<<<< HEAD
 
 app.use(express.static(path.join(__dirname, 'build')));
 
 app.get('/', function (req, res) {
     res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
+=======
+app.use(express.static(path.join(__dirname, 'build')))
+>>>>>>> a39f75461176abc17d316e14e927c242d52f5d3e
 
 app.listen(PORT, () => console.log('Server started~ <3'));
