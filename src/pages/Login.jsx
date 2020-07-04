@@ -26,8 +26,6 @@ class Login extends React.Component{
 
     handleLogin = async (e) => {
         e.preventDefault();
-        console.log(this.state.email);
-        console.log(this.state.password);
 
         const loginData = {
             email: this.state.email,
