@@ -35,8 +35,8 @@ router.post('/login', async (req, res) => {
     if (error) return res.status(400).send(error.details[0].message);
 
     // Check if email is in db
-        const userInDB = await User.findOne({email: req.body.email});
-        if (!userInDB) return res.status(400).send('Invalid email');
+    const userInDB = await User.findOne({email: req.body.email});
+    if (!userInDB) return res.status(400).send('Invalid email');
     
     // Check password
     const validPassword = await bcrypt.compare(req.body.password, userInDB.password);
@@ -45,8 +45,6 @@ router.post('/login', async (req, res) => {
     // Create and assign JWT
     const token = jwt.sign({_id: userInDB._id}, process.env.TOKEN_SECRET);
     res.header('auth-token', token).send(token);
-
-    //res.send('Logged in')
 });
 
 module.exports = router;

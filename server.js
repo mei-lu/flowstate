@@ -12,14 +12,15 @@ const statsRoute = require('./server/routes/Stats');
 
 // Connect to DB
 mongoose.connect(process.env.DB_CONNECTION, {useUnifiedTopology: true, useNewUrlParser: true})
-.then( () => console.log('Connected to db~'));
+.then(() => console.log('Connected to db~'));
 
 // Middlewares
 app.use(express.json());
 
 // Route Middlewares
-app.use('/api/users', authRoute);
+// app.use('/api/users', authRoute);
 app.use('/api/stats', statsRoute);
+app.use('/api', authRoute);
 
 app.use(express.static(path.join(__dirname, 'build')));
 
