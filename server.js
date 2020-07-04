@@ -4,6 +4,7 @@ const jwt = require('jsonwebtoken');
 const app = express();
 const PORT = process.env.PORT || 5000;
 const path = require('path');
+const cookieParser = require('cookie-parser');
 require('dotenv').config();
 
 // Import routes
@@ -16,6 +17,7 @@ mongoose.connect(process.env.DB_CONNECTION, {useUnifiedTopology: true, useNewUrl
 
 // Middlewares
 app.use(express.json());
+app.use(cookieParser());
 
 // Route Middlewares
 // app.use('/api/users', authRoute);
