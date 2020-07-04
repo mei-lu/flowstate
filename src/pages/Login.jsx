@@ -34,16 +34,15 @@ class Login extends React.Component{
 
         console.log(loginData);
 
-        fetch('/api/login', {
+        await fetch('/api/login', {
             method: 'POST',
             headers: {
-                'Access-Control-Allow-Origin':'*',
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify(loginData),
         })
         .then(response => response.json())
-        .then( data => {
+        .then(data => {
             console.log('Success', data);
         })
         .catch((error) => {
