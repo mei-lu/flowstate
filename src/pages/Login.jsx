@@ -24,13 +24,17 @@ class Login extends React.Component{
         });
     }
 
-    handleLogin = async () => {
+    handleLogin = async (e) => {
+        e.preventDefault();
         console.log(this.state.email);
         console.log(this.state.password);
+
         const loginData = {
             email: this.state.email,
             password: this.state.password
-        }
+        };
+
+        console.log(loginData);
 
         fetch('/api/login', {
             method: 'POST',
@@ -45,17 +49,17 @@ class Login extends React.Component{
             console.log('Success', data);
         })
         .catch((error) => {
-            console.log(error);
+            console.error(error);
         });
     }
 
     render() {
         return <div>
             <h2 ref={element => this.headingRef = element}>Enter Station</h2>
-            <form action='/api/login' method='post' className='login-form' ref={element => this.loginRef = element}>
+            <form onSubmit={e => this.handleLogin(e)} className='login-form' ref={element => this.loginRef = element}>
                 <input type="text" placeholder='Email' name='email' className='login-field' onChange={e => this.handleForm(e)}/>
                 <input type="password" placeholder='Password' name='password' className='login-field' onChange={e => this.handleForm(e)}/>
-                <button className='login-button' type='submit' onSubmit={this.handleLogin()}>Login</button>
+                <button className='login-button' type='submit'>Login</button>
                 <h5>Don't have an account? <Link to='/signup'>Sign Up</Link></h5>
             </form>
     </div>
