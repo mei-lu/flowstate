@@ -9,7 +9,6 @@ import Navigation from './components/Navigation';
 import StarrySky from './components/StarrySky';
 
 function App() {
-
   return (
     <div className="App">
         <Navigation />
