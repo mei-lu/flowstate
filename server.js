@@ -20,12 +20,12 @@ app.use(express.json());
 app.use(cookieParser());
 
 // Route Middlewares
-// app.use('/api/users', authRoute);
 app.use('/api/stats', statsRoute);
 app.use('/api', authRoute);
 
 app.use(express.static(path.join(__dirname, 'build')));
 
+//Catch all other URLS to work with front end routing out of the build folder
 app.get('/*', function (req, res) {
     res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });

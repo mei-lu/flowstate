@@ -2,6 +2,7 @@ const router = require('express').Router();
 const User = require('../models/User');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken')
+const cookieParser = require('cookie-parser');
 const {signUpValidation, loginValidation} = require('../validation/validation');
 
 
@@ -46,6 +47,7 @@ router.post('/login', async (req, res) => {
     const token = jwt.sign({
         _id: userInDB._id
     }, process.env.TOKEN_SECRET, {expiresIn: '1h'});
+    // res.cookie('token', token, {httpOnly});
     res.header('auth-token', token).send(token);
 });
 
