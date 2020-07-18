@@ -1,10 +1,10 @@
 import React from 'react';
-import Level from '../components/Level'
+import Logo from '../components/Logo';
 import {Link} from '@reach/router';
 class Navigation extends React.Component {
     render() {
         return <div className='navigation'>
-            <div><Level/></div>
+            <p>30 Points</p>
             <div className='nav-labels'>
                 <Link to='/'>Timer</Link>
                 <Link to='/dashboard'>Dashboard</Link>
