@@ -5,7 +5,7 @@ class Logo extends React.Component{
     render() {
         return <div className='logo'>
             <img className='logo-img' src={LogoImg} alt=''/>
-            <p className='glow logo-text'>Lunar</p>
+            <p className='glow logo-text'>LunarTask</p>
         </div>
     }
 }
