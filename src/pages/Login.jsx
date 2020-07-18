@@ -1,8 +1,6 @@
 import React from 'react';
 import {Link} from '@reach/router';
 import {gsap} from 'gsap';
-import { response } from 'express';
-import { signedCookies } from 'cookie-parser';
 
 class Login extends React.Component{
     constructor(props) {
@@ -49,9 +47,6 @@ class Login extends React.Component{
         .catch((error) => {
             console.error(error);
         });
-
-        const jwt = response.json();
-        Cookies.set('jwt', jwt);
     }
 
     render() {
