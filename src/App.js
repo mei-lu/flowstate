@@ -7,6 +7,9 @@ import Signup from './pages/Signup';
 import Logo from './components/Logo';
 import Navigation from './components/Navigation';
 import StarrySky from './components/StarrySky';
+import Landing from './pages/Landing';
+import Dashboard from './pages/Dashboard';
+import Kanban from './pages/Kanban';
 
 function App() {
   return (
@@ -15,8 +18,10 @@ function App() {
         <Logo/>
           <div className="Contents">
           <Router>
-          <Pomodoro path='/'/>
-          {/* <Dashboard path='/dashboard'/> */}
+          {/* <Pomodoro path='/'/> */}
+          <Landing path='/'/>
+          <Kanban path='/tasks'/>
+          <Dashboard path='/dashboard'/>
           <Login path='/login'/>
           <Signup path='/signup'/>
         </Router>

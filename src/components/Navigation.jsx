@@ -5,8 +5,8 @@ class Navigation extends React.Component {
         return <div className='navigation'>
             <p>30 Points</p>
             <div className='nav-labels'>
-                <Link to='/'>Timer</Link>
                 <Link to='/dashboard'>Dashboard</Link>
+                <Link to='/tasks'>Tasks</Link>
                 <Link to='/login'>Log In</Link>
             </div>
         </div>

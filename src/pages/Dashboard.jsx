@@ -7,3 +7,4 @@ class Dashboard {
 
     //Achievements (?)
 }
+export default Dashboard;
