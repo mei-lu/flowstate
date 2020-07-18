@@ -2,7 +2,7 @@ import React from 'react';
 import Play from '../img/play.svg';
 import Pause from '../img/pause.svg';
 import Stop from '../img/stop.svg'
-import {gsap} from 'gsap';
+import { gsap } from 'gsap';
 
 class Pomodoro extends React.Component {
     constructor(props) {

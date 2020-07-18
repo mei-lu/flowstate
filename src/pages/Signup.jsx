@@ -1,6 +1,6 @@
 import React from 'react';
-import {Link} from '@reach/router';
-import {gsap} from 'gsap';
+import { Link } from '@reach/router';
+import { gsap } from 'gsap';
 
 class Signup extends React.Component{
     constructor(props) {
