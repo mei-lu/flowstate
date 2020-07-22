@@ -1,5 +1,5 @@
 import React from 'react';
-import {Router, Link} from '@reach/router';
+import {Link} from 'react-router-dom';
 
 class Landing extends React.Component{
     render() {

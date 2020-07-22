@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link} from '@reach/router';
+import {withRouter, Link} from 'react-router-dom';
 class Navigation extends React.Component {
     render() {
         return <div className='navigation'>
@@ -13,4 +13,4 @@ class Navigation extends React.Component {
     }
 }
 
-export default Navigation;
+export default withRouter(Navigation);

@@ -23,11 +23,11 @@ app.use(cookieParser());
 app.use('/api/stats', statsRoute);
 app.use('/api', authRoute);
 
-app.use(express.static(path.join(__dirname, 'build')));
+// app.use(express.static(path.join(__dirname, 'build')));
 
-//Catch all other URLS to work with front end routing out of the build folder
-app.get('/*', function (req, res) {
-    res.sendFile(path.join(__dirname, 'build', 'index.html'));
-});
+// //Catch all other URLS to work with front end routing out of the build folder
+// app.get('/*', function (req, res) {
+//     res.sendFile(path.join(__dirname, 'build', 'index.html'));
+// });
 
 app.listen(PORT, () => console.log('Server started~ <3'));

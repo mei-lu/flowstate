@@ -1,6 +1,6 @@
 import React from 'react';
-import { Link } from '@reach/router';
-import { gsap } from 'gsap';
+import {Link} from 'react-router-dom';
+import {gsap} from 'gsap';
 
 class Login extends React.Component{
     constructor(props) {
