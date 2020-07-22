@@ -1,6 +1,16 @@
 import React from 'react';
 
 class ContributionGraph extends React.Component {
+
+    hardCodeSquares() {
+        const items = []
+        for(var i = 0; i < 357; i++) {
+            const level = Math.floor(Math.random() * 3);
+            items.push(<li data-level={level}></li>);
+        }
+        return items;
+    }
+
     render() {
         return <div class='contribution-graph'>
             <ul class='months'>
@@ -26,7 +36,9 @@ class ContributionGraph extends React.Component {
                 <li>Fri</li>
                 <li>Sat</li>
             </ul>
-            <ul class='squares'></ul>
+            <ul class='squares'>
+                {this.hardCodeSquares()}
+            </ul>
         </div>
     }
 }
