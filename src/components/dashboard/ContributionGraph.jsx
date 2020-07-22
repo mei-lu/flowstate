@@ -36,6 +36,7 @@ class ContributionGraph extends React.Component {
                 <li>Fri</li>
                 <li>Sat</li>
             </ul>
+            <h3 class='contribution-count'>293 contributions this year</h3>
             <ul class='squares'>
                 {this.hardCodeSquares()}
             </ul>

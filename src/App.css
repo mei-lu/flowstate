@@ -143,14 +143,24 @@ a {
 
 .contribution-graph {
   display: inline-grid;
-  grid-template-areas: "empty months" "days squares";
+  grid-template-areas: 
+  "empty contributions"
+  "empty months" 
+  "days squares";
   grid-template-columns: auto 1fr;
   gap: 10px;
-  padding: .5rem;
+
 }
 
 .contribution-graph ul {
   list-style: none;
+}
+
+.contribution-count {
+  text-align: left;
+  grid-area: contributions;
+  grid-auto-flow: column;
+  grid-auto-columns: var(--square-size);
 }
 
 .months { 

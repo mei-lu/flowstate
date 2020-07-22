@@ -19,7 +19,6 @@ class Dashboard extends React.Component{
                     <StatCardSmall title='Total Focus' data='3 Days 10 Hrs 30 Mins'/>
                 </div>
             </div>
-            <h3 class='contribution-count'>293 Contributions</h3>
             <ContributionGraph/>
         </div>
     }
