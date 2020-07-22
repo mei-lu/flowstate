@@ -1,4 +1,5 @@
 import React from 'react';
+import ContributionGraph from '../components/dashboard/ContributionGraph';
 
 class Dashboard extends React.Component{
     // Total days / hours / mins focused
@@ -7,7 +8,9 @@ class Dashboard extends React.Component{
 
     //Achievements (?)
     render() {
-        return <p>Dash</p>
+        return <div>
+            <ContributionGraph/>
+        </div>
     }
 }
 export default Dashboard;
