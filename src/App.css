@@ -148,7 +148,6 @@ a {
   "empty months" 
   "days squares";
   grid-template-columns: auto 1fr;
-  gap: 10px;
 
 }
 
