@@ -5,7 +5,7 @@ class ContributionGraph extends React.Component {
     hardCodeSquares() {
         const items = []
         for(var i = 0; i < 357; i++) {
-            const level = Math.floor(Math.random() * 3);
+            const level = Math.floor(Math.random() * 4);
             items.push(<li data-level={level}></li>);
         }
         return items;

@@ -2,13 +2,13 @@
 
 .App {
   text-align: center;
-  background: linear-gradient(#7891C1, #3F4573 );
+  background: #fff;
   background-size: cover;
   height: 100%;
   width: 100%;
   position: fixed;
   font-family: 'Poppins', sans-serif;
-  color: #fff;
+  color: rgb(62, 53, 85);
 }
 
 a {
@@ -38,7 +38,7 @@ a {
   justify-content: center;
   width: 22em;
   height: 22em;
-  background-color: #acb5d3be;
+  background-color: hsla(271, 56%, 52%, 0.24);
   border-radius: 200px;
 }
 
@@ -61,18 +61,12 @@ a {
 
 .navigation {
   background-color: transparent;
-  color: #fff;
   display: flex;
   justify-content: space-between;
-}
-
-.nav-contents {
-  display: flex;
-  flex-direction: row;
+  padding: 2em;
 }
 
 .nav-labels {
-  padding: 2em;
   float: right;
   width: 20vw;
   display: flex;
@@ -82,22 +76,19 @@ a {
 
 .nav-labels a {
   text-decoration: none;
-  color: #fff;
+  color: rgb(77, 77, 77);
 }
 
 .logo {
   z-index: -999;
-  width: 100vw;
   display: flex;
-  flex-direction: column;
-  position: absolute;
-  padding-top: 1.5rem;
+  flex-direction: row;
   top: 0;
 }
 
 .logo-img {
-  width: 4rem;
-  margin: 0 auto;
+  width: 3rem;
+  padding-right: 1rem;
 }
 
 .level-wrapper {
@@ -147,19 +138,6 @@ a {
   animation: shine 2s forwards, blink 10s 1s infinite;
 }
 
-@keyframes shine {
-  0% {
-    color: #ad456f;
-    text-shadow: none;
-  }
-  100% {
-    color: #ffe6ff;
-    text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #ff65bd,
-      -0.2rem 0.1rem 1rem #ff65bd, 0.2rem 0.1rem 1rem #ff65bd,
-      0 -0.5rem 2rem #ff2f2f, 0 0.5rem 3rem #ff2483;
-  }
-}
-
 /* Login Page */
 .login-form {
   display: flex;
@@ -172,10 +150,12 @@ a {
   margin: .5em;
   padding: 1em;
   outline: none;
-  border: none;
+  border: 1px;
   width: 20em;
   color: #3F4573;
+  background-color: rgb(241, 241, 243);
   font-family: 'Poppins', sans-serif;
+  
 }
 
 ::placeholder {
@@ -233,7 +213,16 @@ a {
                          calc(var(--week-width) * 5) /* Dec */;
 }
 .days { grid-area: days; }
-.squares { grid-area: squares; }
+
+.days li:nth-child(odd) {
+  visibility: hidden;
+}
+
+.squares { 
+  grid-area: squares; 
+  grid-auto-flow: column;
+  grid-auto-columns: var(--square-size);
+}
 
 .days,
 .squares {
@@ -242,27 +231,19 @@ a {
   grid-template-rows: repeat(7, var(--square-size));
 }
 
-.squares {
-  grid-auto-flow: column;
-  grid-auto-columns: var(--square-size);
-}
-
-.days li:nth-child(odd) {
-  visibility: hidden;
-}
-
 .squares li {
-  background-color: #ebedf0;
+  background-color: rgb(255, 255, 255);
+  border-radius: 2px;
 }
 
 .squares li[data-level="1"] {
-  background-color: #c6e48b;
+  background-color: #b3e7ff;
 }
 
 .squares li[data-level="2"] {
-  background-color: #7bc96f;
+  background-color: #6193ff;
 }
 
 .squares li[data-level="3"] {
-  background-color: #196127;
+  background-color: #8165ce;
 }
