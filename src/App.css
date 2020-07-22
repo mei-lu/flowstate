@@ -12,7 +12,7 @@
 }
 
 a {
-  color: rgb(167, 172, 248);
+  color: rgb(150, 155, 223);
   text-decoration: none;
 }
 
@@ -201,4 +201,15 @@ a {
 
 .squares li[data-level="3"] {
   background-color: rgb(114, 96, 218);
+}
+
+/* Dashboard Status Cards */
+.statcard-small {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  width: 1fr;
+  border-radius: 1rem;
+  background-color: rgb(227, 229, 250);
+  margin: 0.5rem;
 }
