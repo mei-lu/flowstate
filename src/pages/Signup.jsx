@@ -46,7 +46,7 @@ class Signup extends React.Component{
 
     render() {
         return <div>
-            <h2 ref={element => this.headingRef = element}>Ticket Booth</h2>
+            <h2 ref={element => this.headingRef = element}>Sign Up</h2>
             <form onSubmit={e => this.signUpUser(e)} className='login-form' ref={element => this.signupRef = element}>
                 <input type="text" placeholder='Name' name='name' className='login-field' onChange={e => this.handleForm(e)}/>
                 <input type="text" placeholder='Email' name='email' className='login-field' onChange={e => this.handleForm(e)}/>

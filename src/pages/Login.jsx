@@ -51,12 +51,12 @@ class Login extends React.Component{
 
     render() {
         return <div>
-            <h2 ref={element => this.headingRef = element}>Enter Station</h2>
+            <h2 ref={element => this.headingRef = element}>Login</h2>
             <form onSubmit={e => this.handleLogin(e)} className='login-form' ref={element => this.loginRef = element}>
                 <input type="text" placeholder='Email' name='email' className='login-field' onChange={e => this.handleForm(e)}/>
                 <input type="password" placeholder='Password' name='password' className='login-field' onChange={e => this.handleForm(e)}/>
                 <button className='login-button' type='submit'>Login</button>
-                <h5>Don't have an account? <Link to='/signup'>Sign Up</Link></h5>
+                <h5>Don't have an account? <Link to='/signup'><b>Sign Up</b></Link></h5>
             </form>
     </div>
     }
