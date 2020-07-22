@@ -12,7 +12,7 @@
 }
 
 a {
-  color: rgb(144, 123, 219);
+  color: rgb(167, 172, 248);
   text-decoration: none;
 }
 
@@ -125,7 +125,7 @@ a {
   padding: .8em 3em;
   outline: none;
   border: none;
-  background-color: rgb(185, 167, 248);
+  background-color: rgb(167, 172, 248);
   color: #fff;
   font-family: 'Poppins', sans-serif;
   font-size: .9em;
@@ -192,13 +192,13 @@ a {
 }
 
 .squares li[data-level="1"] {
-  background-color: #c6deff;
+  background-color: rgb(200, 210, 255);
 }
 
 .squares li[data-level="2"] {
-  background-color: #809dff;
+  background-color: rgb(167, 172, 248);
 }
 
 .squares li[data-level="3"] {
-  background-color: #6158e4;
+  background-color: rgb(114, 96, 218);
 }
