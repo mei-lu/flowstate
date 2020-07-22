@@ -7,6 +7,7 @@ class Navigation extends React.Component {
             <div className='nav-labels'>
                 <Link to='/dashboard'>Dashboard</Link>
                 <Link to='/tasks'>Tasks</Link>
+                <Link to='/pomodoro'>Timer</Link>
                 <Link to='/login'>Log In</Link>
             </div>
         </div>
