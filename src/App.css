@@ -31,8 +31,9 @@ a {
   justify-content: center;
   width: 22em;
   height: 22em;
-  background-color: hsla(271, 56%, 52%, 0.24);
+  background-color: transparent;
   border-radius: 200px;
+  border: 1.5px solid rgb(62, 53, 85);
 }
 
 .increment-btn {
@@ -40,7 +41,7 @@ a {
   border: none;
   outline: none;
   cursor: pointer;
-  color: rgb(70, 66, 80);
+  color: rgb(62, 53, 85);
   font-size: 1em;
   padding: 0.5em;
 }
@@ -49,7 +50,7 @@ a {
   display: flex;
   flex-direction: row;
   font-size: 3em;
-  color: #fff;
+  color: rgb(62, 53, 85);
 }
 
 /* Nav Bar Styling */
