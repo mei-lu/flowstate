@@ -13,7 +13,7 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <Navigation />
+      <Navigation />
         <Switch>
           <div className="Contents">
           <Route exact path='/' component={Landing}/>

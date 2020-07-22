@@ -213,3 +213,9 @@ a {
   background-color: rgb(227, 229, 250);
   margin: 0.5rem;
 }
+
+/* Profile Pic */
+.profile-pic {
+  width: 5rem;
+  height: auto;
+}
