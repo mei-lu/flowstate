@@ -23,14 +23,6 @@ a {
   width: 100vw;
 }
 
-.starsParticles {
-  z-index: -10;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-}
-
 .pomodoro {
   display: flex;
   flex-direction: column;
@@ -132,10 +124,6 @@ a {
   padding: 10px;
   border-radius: 40px;
   background-color: transparent;
-}
-
-.glow {
-  animation: shine 2s forwards, blink 10s 1s infinite;
 }
 
 /* Login Page */

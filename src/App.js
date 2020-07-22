@@ -5,7 +5,6 @@ import Pomodoro from './pages/Pomodoro';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import Navigation from './components/Navigation';
-import StarrySky from './components/StarrySky';
 import Landing from './pages/Landing';
 import Dashboard from './pages/Dashboard';
 import Kanban from './pages/Kanban';
@@ -26,7 +25,6 @@ function App() {
           </div>
         </Switch>
       </Router>
-      <StarrySky />
     </div>
   );
 }
