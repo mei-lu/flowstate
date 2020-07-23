@@ -154,7 +154,7 @@ ul {
 /* Contribution Graph */
 
 :root {
-  --square-size: 15px;
+  --square-size: 13px;
   --square-gap: 5px;
   --week-width: calc(var(--square-size) + var(--square-gap));
 }
@@ -162,10 +162,10 @@ ul {
 .contribution-graph {
   display: inline-grid;
   grid-template-areas: 
-  ". contributions"
   "empty months" 
   "days squares";
   grid-template-columns: auto 1fr;
+  font-size: 0.7rem;
 
 }
 
@@ -175,9 +175,7 @@ ul {
 
 .contribution-count {
   text-align: left;
-  grid-area: contributions;
-  padding: 1em;
-  margin: 0;
+  font-weight: 500;
 }
 
 .months { 
