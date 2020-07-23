@@ -12,7 +12,7 @@ class Dashboard extends React.Component{
                         <div className='profile-pic' style={{backgroundImage: `url(${ProfilePic})`}}></div>
                         <h1>Hi Mei!</h1>
                     </div>
-                    <h3>Today's Stats</h3>
+                    <h4>Productivity Stats</h4>
                     <div className='small-stats-group'>
                     <StatCardSmall title='Contributions' data='+10'/>
                     <StatCardSmall title='Record Streak' data='48 Days'/>
@@ -20,8 +20,11 @@ class Dashboard extends React.Component{
                 </div>
                 </div>
                 <div className='today-section'>
-                    <div className='today-card'><p className='dashboard-heading'>13 Days</p> Current Streak</div>
-                    <div className='today-card'><p className='dashboard-heading'>10 Tasks</p>Left Today</div>
+                    <h3 className='today-heading'>Today</h3>
+                    <div className='today-card-group'>
+                        <div className='today-card'><p className='dashboard-heading'>13 Days</p> Current Streak</div>
+                        <div className='today-card'><p className='dashboard-heading'>10 Tasks</p>Left Today</div>
+                    </div>
                 </div>
 
                 <div className='graph-section'>

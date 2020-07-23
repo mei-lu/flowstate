@@ -177,6 +177,7 @@ ul {
 .contribution-count {
   text-align: left;
   font-weight: 500;
+  margin: 0 0 1rem 0;
 }
 
 .months { 
@@ -237,6 +238,7 @@ ul {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-areas: 
+  "profile-section ."
   "profile-section today-section"
   "profile-section graph-section";
   justify-content: center;
@@ -246,6 +248,9 @@ ul {
 
 .graph-section {
   grid-area: graph-section;
+  background-color: #fff;
+  border-radius: 1rem;
+  padding: 2rem;
 }
 
 /* Dashboard Profile Section */
@@ -255,6 +260,8 @@ ul {
   justify-content: center;
   grid-area: profile-section;
   padding: 1rem;
+  background-color: #fff;
+  border-radius: 1rem;
 }
 
 .profile-pic {
@@ -276,20 +283,31 @@ ul {
   justify-content: space-between;
   padding: .5rem 2rem;
   border-radius: 1rem;
-  background-color: rgb(200, 210, 255);
+  background-color: rgb(241, 169, 197);
+  color: #fff;
   box-shadow: 10px 10px 11px -8px rgba(204,204,204,1);
   margin: 0.5rem 0.5rem 0 0.5rem;
 }
 
+.today-heading {
+  text-align: left;
+  margin: 0;
+}
+
 .today-section {
   grid-area: today-section;
-  display: flex;
-  justify-content: center;
+  background-color: #fff;
+  border-radius: 1rem;
+  padding: 2rem;
 }
 
 .today-card {
-  padding: 1rem;
   margin: 1rem;
+}
+
+.today-card-group {
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .dashboard-heading {
