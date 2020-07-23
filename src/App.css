@@ -220,10 +220,10 @@ a {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-areas: 
-  "profile-section . small-stats-section"
+  "profile-section . ."
   "today-contribution today-streak small-stats-section";
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
 }
 
 /* Dashboard Profile Section */
@@ -259,6 +259,7 @@ a {
 .dashboard-heading {
   font-size: 1.5rem;
   font-weight: bold;
+  margin: 0.5rem;
 }
 
 .small-stats-group {

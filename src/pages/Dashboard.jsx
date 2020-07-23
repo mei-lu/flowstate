@@ -12,11 +12,11 @@ class Dashboard extends React.Component{
                     <h1>Hi Mei!</h1>
                 </div>
                 <div className='today-streak'><p className='dashboard-heading'>13 Days</p> Current Streak</div>
-                <div className='today-contribution'><p className='dashboard-heading'>10 Tasks</p>Daily Count</div>
+                <div className='today-contribution'><p className='dashboard-heading'>10 Tasks</p>Left Today</div>
                 <div className='small-stats-group'>
-                    <StatCardSmall title='Current Streak' data='20 Days'/>
+                    <StatCardSmall title='Contributions' data='+10'/>
                     <StatCardSmall title='Record Streak' data='48 Days'/>
-                    <StatCardSmall title='Total Focus' data='3 Days 10 Hrs 30 Mins'/>
+                    <StatCardSmall title='Total Focus' data='10 Hrs 30 Mins'/>
                 </div>
             </div>
             <ContributionGraph/>
