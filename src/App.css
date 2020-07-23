@@ -41,7 +41,7 @@ ul {
 
 .full-width{
   width: 100vw;
-  margin: 0 10rem;
+  margin: 0 8rem;
 }
 
 .pomodoro {
@@ -234,18 +234,27 @@ ul {
 
 .dashboard-tiles {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   grid-template-areas: 
-  "profile-section . ."
-  "today-contribution today-streak small-stats-section";
+  "profile-section today-section"
+  "profile-section graph-section";
   justify-content: center;
   align-items: center;
+  gap: 1rem;
+}
+
+.graph-section {
+  grid-area: graph-section;
 }
 
 /* Dashboard Profile Section */
 .profile-section {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   grid-area: profile-section;
+  background-color: rgb(224, 226, 255);
+  padding: 1rem;
 }
 
 .profile-pic {
@@ -258,31 +267,34 @@ ul {
   background-position: top center;
 }
 
+.profile-card {
+  display: flex;
+}
+
 .statcard-small {
   display: flex;
   justify-content: space-between;
   padding: .5rem 2rem;
   border-radius: 1rem;
-  background-color: rgb(238, 240, 253);
+  background-color: rgb(255, 255, 255);
   margin: 0.5rem 0.5rem 0 0.5rem;
 }
 
-.today-streak {
-  grid-area: today-streak;
+.today-section {
+  grid-area: today-section;
+  display: flex;
+  justify-content: center;
 }
 
-.today-contribution {
-  grid-area: today-contribution;
+.today-card {
+  padding: 1rem;
+  margin: 1rem;
 }
 
 .dashboard-heading {
   font-size: 1.5rem;
   font-weight: 500;
   margin: 0.5rem;
-}
-
-.small-stats-group {
-  grid-area: small-stats-section;
 }
 
 /* Kanban */
