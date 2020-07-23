@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
 
 .App {
   text-align: center;
@@ -8,6 +8,18 @@
   width: 100%;
   font-family: 'Poppins', sans-serif;
   color: rgb(62, 53, 85);
+}
+
+h5 {
+  font-weight: 400;
+}
+
+h1 {
+  font-weight: 500;
+}
+
+h2 {
+  font-weight: 500;
 }
 
 a {
@@ -267,10 +279,16 @@ ul {
 
 .dashboard-heading {
   font-size: 1.5rem;
-  font-weight: bold;
+  font-weight: 500;
   margin: 0.5rem;
 }
 
 .small-stats-group {
   grid-area: small-stats-section;
+}
+
+/* Kanban */
+
+.task-card {
+  font-weight: bolder;
 }

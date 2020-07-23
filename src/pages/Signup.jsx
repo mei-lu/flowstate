@@ -52,7 +52,7 @@ class Signup extends React.Component{
                 <input type="text" placeholder='Email' name='email' className='login-field' onChange={e => this.handleForm(e)}/>
                 <input type="password" placeholder='Password' name='password' className='login-field' onChange={e => this.handleForm(e)}/>
                 <button className='login-button'>Sign Up</button>
-                <h5>Already have an account? <Link to='/login'>Login</Link></h5>
+                <h5>Already have an account? <Link to='/login'><b>Login</b></Link></h5>
             </form>
     </div>
     }
