@@ -218,11 +218,12 @@ a {
 
 .dashboard-tiles {
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-template-areas: 
-  "profile-section small-stats-section"
-  "today-section small-stats-section";
-  justify-content: space-between;
+  "profile-section . small-stats-section"
+  "today-contribution today-streak small-stats-section";
+  justify-content: center;
+  align-items: flex-end;
 }
 
 /* Dashboard Profile Section */
@@ -244,15 +245,20 @@ a {
   padding: .5rem 2rem;
   border-radius: 1rem;
   background-color: rgb(238, 240, 253);
-  margin: 0.5rem;
+  margin: 0.5rem 0.5rem 0 0.5rem;
 }
 
-.today-stats-group {
-  grid-area: today-section;
+.today-streak {
+  grid-area: today-streak;
 }
 
-.today-stat {
-  text-align: left;
+.today-contribution {
+  grid-area: today-contribution;
+}
+
+.dashboard-heading {
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
 .small-stats-group {

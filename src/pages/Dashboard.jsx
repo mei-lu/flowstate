@@ -1,7 +1,6 @@
 import React from 'react';
 import ContributionGraph from '../components/dashboard/ContributionGraph';
 import StatCardSmall from '../components/dashboard/StatCardSmall';
-import StatToday from '../components/dashboard/StatToday';
 import ProfilePic from '../img/ProfilePic.jpg';
 
 class Dashboard extends React.Component{
@@ -12,7 +11,8 @@ class Dashboard extends React.Component{
                     <img className='profile-pic' src={ProfilePic} alt=''/>
                     <h1>Hi Mei!</h1>
                 </div>
-                <StatToday className='today-stats-group' points='10' focusTime='49'/>
+                <div className='today-streak'><p className='dashboard-heading'>13 Days</p> Current Streak</div>
+                <div className='today-contribution'><p className='dashboard-heading'>10 Tasks</p>Daily Count</div>
                 <div className='small-stats-group'>
                     <StatCardSmall title='Current Streak' data='20 Days'/>
                     <StatCardSmall title='Record Streak' data='48 Days'/>
