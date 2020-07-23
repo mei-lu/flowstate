@@ -8,7 +8,8 @@ class Dashboard extends React.Component{
         return <div className='full-width'>
             <div className='dashboard-tiles'>
                 <div className='profile-section'>
-                    <img className='profile-pic' src={ProfilePic} alt=''/>
+                    <div className='profile-pic' style={{backgroundImage: `url(${ProfilePic})`}}></div>
+                    {/* <img className='profile-pic' src={ProfilePic} alt=''/> */}
                     <h1>Hi Mei!</h1>
                 </div>
                 <div className='today-streak'><p className='dashboard-heading'>13 Days</p> Current Streak</div>
