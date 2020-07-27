@@ -5,19 +5,12 @@
   "proxy": "http://localhost:5000",
   "port": "3000",
   "dependencies": {
-    "@hapi/joi": "^17.1.1",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
-    "bcryptjs": "^2.4.3",
-    "cookie-parser": "^1.4.5",
-    "express": "^4.17.1",
     "gsap": "^3.3.4",
-    "jsonwebtoken": "^8.5.1",
-    "mongoose": "^5.9.21",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-particles-js": "^3.2.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "^3.4.1"
   },
@@ -44,8 +37,6 @@
     ]
   },
   "devDependencies": {
-    "concurrently": "^5.2.0",
-    "dotenv": "^8.2.0",
-    "nodemon": "^2.0.4"
+    "dotenv": "^8.2.0"
   }
 }
