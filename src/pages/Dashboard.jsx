@@ -19,16 +19,17 @@ class Dashboard extends React.Component{
                     <StatCardSmall title='Total Focus' data='10 Hrs 30 Mins'/>
                 </div>
                 </div>
+
+                <h3 className='today-heading'>Today</h3>
                 <div className='today-section'>
-                    <h3 className='today-heading'>Today</h3>
                     <div className='today-card-group'>
                         <div className='today-card'><p className='dashboard-heading'>13 Days</p> Current Streak</div>
                         <div className='today-card'><p className='dashboard-heading'>10 Tasks</p>Left Today</div>
                     </div>
                 </div>
 
+                <h3 className='contribution-count'>293 contributions this year</h3>
                 <div className='graph-section'>
-                    <h3 class='contribution-count'>293 contributions this year</h3>
                     <ContributionGraph/>
                 </div>
             </div>
