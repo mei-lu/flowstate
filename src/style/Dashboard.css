@@ -1,0 +1,160 @@
+/* Contribution Graph */
+
+:root {
+    --square-size: 13px;
+    --square-gap: 5px;
+    --week-width: calc(var(--square-size) + var(--square-gap));
+  }
+  
+  .contribution-graph {
+    display: inline-grid;
+    grid-template-areas: 
+    "empty months" 
+    "days squares";
+    grid-template-columns: auto 1fr;
+    font-size: 0.7rem;
+  
+  }
+  
+  .contribution-graph ul {
+    list-style: none;
+  }
+  
+  .contribution-count {
+    grid-area: contribution-count;
+    text-align: left;
+    margin: 0;
+  }
+  
+  .months { 
+    grid-area: months; 
+    display: grid;
+    grid-template-columns: calc(var(--week-width) * 4) /* Jan */
+                           calc(var(--week-width) * 4) /* Feb */
+                           calc(var(--week-width) * 4) /* Mar */
+                           calc(var(--week-width) * 5) /* Apr */
+                           calc(var(--week-width) * 4) /* May */
+                           calc(var(--week-width) * 4) /* Jun */
+                           calc(var(--week-width) * 5) /* Jul */
+                           calc(var(--week-width) * 4) /* Aug */
+                           calc(var(--week-width) * 4) /* Sep */
+                           calc(var(--week-width) * 5) /* Oct */
+                           calc(var(--week-width) * 4) /* Nov */
+                           calc(var(--week-width) * 5) /* Dec */;
+  }
+  .days { grid-area: days; }
+  
+  .days li:nth-child(odd) {
+    visibility: hidden;
+  }
+  
+  .squares { 
+    grid-area: squares; 
+    grid-auto-flow: column;
+    grid-auto-columns: var(--square-size);
+  }
+  
+  .days,
+  .squares {
+    display: grid;
+    grid-gap: var(--square-gap);
+    grid-template-rows: repeat(7, var(--square-size));
+  }
+  
+  .squares li {
+    background-color: rgb(226, 226, 226);
+    border-radius: 2px;
+  }
+  
+  .squares li[data-level="1"] {
+    background-color: rgb(200, 210, 255);
+  }
+  
+  .squares li[data-level="2"] {
+    background-color: rgb(167, 172, 248);
+  }
+  
+  .squares li[data-level="3"] {
+    background-color: rgb(114, 96, 218);
+  }
+  
+  /* Dashboard Data Cards */
+  
+  .dashboard-tiles {
+    display: grid;
+    grid-template-areas: 
+    "profile-section today-heading"
+    "profile-section today-section"
+    "profile-section contribution-count"
+    "profile-section graph-section";
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .graph-section {
+    grid-area: graph-section;
+    border-radius: 3rem;
+    padding: 2rem;
+    border: 1px solid rgb(167, 172, 248);
+  }
+  
+  /* Dashboard Profile Section */
+  .profile-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    grid-area: profile-section;
+    padding: 1rem;
+  }
+  
+  .profile-pic {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    margin-right: 1rem;
+    background-color: rgb(230, 238, 255);
+    background-size: cover;
+    background-position: top center;
+  }
+  
+  .profile-card {
+    display: flex;
+  }
+  
+  .statcard-small {
+    display: flex;
+    justify-content: space-between;
+    padding: .5rem 2rem;
+    border-radius: 1rem;
+    color: rgb(64, 58, 80);
+    box-shadow: 10px 10px 11px -8px rgba(204,204,204,1);
+    margin: 0.5rem 0.5rem 0 0.5rem;
+  }
+  
+  .today-heading {
+    grid-area: today-heading;
+    text-align: left;
+    margin: 0;
+  }
+  
+  .today-section {
+    grid-area: today-section;
+    padding: 2rem;
+  }
+  
+  .today-card {
+    margin: 1rem;
+    border-radius: 3rem;
+  }
+  
+  .today-card-group {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  
+  .dashboard-heading {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin: 0.5rem;
+  }

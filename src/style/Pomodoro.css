@@ -1,0 +1,36 @@
+.pomodoro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 22em;
+    height: 22em;
+    background-color: transparent;
+    border-radius: 200px;
+    border: 1.5px solid rgb(62, 53, 85);
+  }
+  
+  .increment-btn {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: rgb(62, 53, 85);
+    font-size: 1em;
+    padding: 0.5em;
+  }
+  
+  .timer-settings {
+    display: flex;
+    flex-direction: row;
+    font-size: 3em;
+    color: rgb(62, 53, 85);
+  }
+  
+  .start-btn {
+    border: none;
+    outline: none;
+    padding: 10px;
+    border-radius: 40px;
+    background-color: transparent;
+  }

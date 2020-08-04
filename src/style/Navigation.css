@@ -1,0 +1,31 @@
+/* Nav Bar Styling */
+.navigation {
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding:  1em 2em 2em 2em;
+    align-items: center;
+  }
+  
+  .nav-labels {
+    float: right;
+    width: 20vw;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .nav-labels a {
+    text-decoration: none;
+    color: rgb(62, 53, 85);
+  }
+  
+  .logo {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .logo-img {
+    width: 2rem;
+    padding-right: 1rem;
+  }
