@@ -105,7 +105,7 @@
     flex-direction: column;
     justify-content: center;
     grid-area: profile-section;
-    background-color: rgb(200, 210, 255);
+    /* background-color: rgb(200, 210, 255); */
     height: 100%;
   }
   

@@ -16,14 +16,16 @@ function App() {
       <Router>
         <Switch>
         <Route exact path='/' component={Landing}/>
-          <div className='full-width'>
+          <div>
             <Navigation />
-            <Route path='/tasks' component={Kanban}/>
-            <Route path='/schedule' component={Schedule}/>
-            <Route path='/pomodoro' component={Pomodoro}/>
-            <Route path='/dashboard' component={Dashboard}/>
-            <Route path='/login' component={Login}/>
-            <Route path='/signup' component={Signup}/>
+            <div className='full-width'>
+              <Route path='/tasks' component={Kanban}/>
+              <Route path='/schedule' component={Schedule}/>
+              <Route path='/pomodoro' component={Pomodoro}/>
+              <Route path='/dashboard' component={Dashboard}/>
+              <Route path='/login' component={Login}/>
+              <Route path='/signup' component={Signup}/>
+            </div>
           </div>
         </Switch>
       </Router>
