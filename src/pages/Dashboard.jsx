@@ -14,10 +14,10 @@ class Dashboard extends React.Component{
                     </div>
                     <h4>Productivity Stats</h4>
                     <div className='small-stats-group'>
-                    <StatCardSmall title='Contributions' data='+10'/>
-                    <StatCardSmall title='Record Streak' data='48 Days'/>
-                    <StatCardSmall title='Total Focus' data='10 Hrs 30 Mins'/>
-                </div>
+                        <StatCardSmall title='Contributions' data='+10'/>
+                        <StatCardSmall title='Record Streak' data='48 Days'/>
+                        <StatCardSmall title='Total Focus' data='10 Hrs 30 Mins'/>
+                    </div>
                 </div>
 
                 <h3 className='today-heading'>Today</h3>

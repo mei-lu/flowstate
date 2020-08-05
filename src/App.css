@@ -5,6 +5,10 @@
 @import './style/Tasks.css';
 @import './style/Auth.css';
 
+body > #root > div {
+  height: 100vh;
+}
+
 .App {
   text-align: center;
   background: rgb(255, 255, 255);

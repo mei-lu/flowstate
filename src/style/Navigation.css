@@ -4,7 +4,6 @@
     flex-direction: column;
     background-color: rgb(236, 231, 250);
     height: 100%;
-    min-height: 100vh;
     z-index: 9999;
   }
   
