@@ -15,4 +15,10 @@
 
   .logo-img {
     width: 2rem;
+    margin: 0.5rem 0.5rem 0 0.5rem;
+  }
+
+  .nav-icons {
+    width: 2rem;
+    margin: 1rem;
   }
