@@ -16,16 +16,27 @@
   min-height: 100vh;
 }
 
+.full-width {
+  height: 100%;
+  min-height: 100vh;
+}
+
 h5 {
   font-weight: 400;
+  padding: 1rem;
+  margin: 0;
 }
 
 h1 {
   font-weight: 500;
+  padding: 1rem;
+  margin: 0;
 }
 
 h2 {
   font-weight: 500;
+  padding: 1rem;
+  margin: 0;
 }
 
 a {

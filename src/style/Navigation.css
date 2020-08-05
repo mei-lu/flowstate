@@ -1,26 +1,18 @@
-.navigation {
-    background-color: transparent;
-    display: relative;
-    flex-direction: column;
-  }
-  
   .nav-labels {
     float: left;
     display: flex;
     flex-direction: column;
+    background-color: rgb(236, 231, 250);
+    height: 100%;
+    min-height: 100vh;
+    z-index: 9999;
   }
   
   .nav-labels a {
     text-decoration: none;
     color: rgb(62, 53, 85);
   }
-  
-  .logo {
-    display: flex;
-    flex-direction: row;
-  }
-  
+
   .logo-img {
     width: 2rem;
-    padding-right: 1rem;
   }

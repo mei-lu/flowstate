@@ -16,7 +16,7 @@ function App() {
       <Router>
         <Switch>
         <Route exact path='/' component={Landing}/>
-          <div>
+          <div className='full-width'>
             <Navigation />
             <Route path='/tasks' component={Kanban}/>
             <Route path='/schedule' component={Schedule}/>
