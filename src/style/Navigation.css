@@ -1,0 +1,24 @@
+  .nav-labels {
+    float: left;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(236, 231, 250);
+    height: 100vh;
+    z-index: 9999;
+    margin-right: 2rem;
+  }
+  
+  .nav-labels a {
+    text-decoration: none;
+    color: rgb(62, 53, 85);
+  }
+
+  .logo-img {
+    width: 2rem;
+    margin: 0.5rem 0.5rem 0 0.5rem;
+  }
+
+  .nav-icons {
+    width: 2rem;
+    margin: 1rem;
+  }
