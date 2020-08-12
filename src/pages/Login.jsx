@@ -43,11 +43,15 @@ class Login extends React.Component{
             }),
         })
         .then(response => {
-            if (!response.ok) this.setState({alert: 'Incorrect email or password'});
+            if (!response.ok) {
+                this.setState({alert: 'Incorrect email or password'});
+                return;
+            }  else {
+                response.json();
+                console.log(response);
+            }
         })
-        .then(response => response.json())
-        .then(response => console.log(response))
-        .catch(error => console.error(error));
+        .catch(console.log('Unable to log in.'));
     }
 
     render() {
