@@ -26,27 +26,20 @@ class Login extends React.Component{
 
     handleLogin = async (e) => {
         e.preventDefault();
-
-        const loginData = {
-            email: this.state.email,
-            password: this.state.password
-        };
-
-        console.log(loginData);
-
-        await fetch('/api/login', {
+        await fetch(`${process.env.REACT_APP_API_BASE}/api/login`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
+                'Accept': 'application/json'
             },
-            body: JSON.stringify(loginData),
+            body: JSON.stringify({
+                email: this.state.email,
+                password: this.state.password
+            }),
         })
-        .then(
-            response => response.json()
-        )
-        .catch((error) => {
-            console.error(error);
-        });
+        .then(response => response.json())
+        .then(response => console.log(response))
+        .catch(error => console.error(error));
     }
 
     render() {
