@@ -1,14 +1,14 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import {gsap} from 'gsap';
-import {handleLogin} from '../utils/AuthFunctions';
 
 class Login extends React.Component{
     constructor(props) {
         super(props);
         this.state = {
             email: '',
-            password: ''
+            password: '',
+            alert: ''
         }
     }
     // Handle on page load GSAP animations
@@ -25,13 +25,39 @@ class Login extends React.Component{
         });
     }
 
+    // POST login information
+    handleLogin = async (email, password) => {
+        if (!email || !password) {
+            this.setState({alert: 'Missing email or password'});
+            return
+        }
+        await fetch(`${process.env.REACT_APP_API_BASE}/api/login`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: JSON.stringify({
+                email: email,
+                password: password
+            }),
+        })
+        .then(response => {
+            if (!response.ok) this.setState({alert: 'Incorrect email or password'});
+        })
+        .then(response => response.json())
+        .then(response => console.log(response))
+        .catch(error => console.error(error));
+    }
+
     render() {
         return <div>
+            {this.state.alert ? this.state.alert : null}
             <h2 ref={element => this.headingRef = element}>Login</h2>
             <div className='login-form' ref={element => this.loginRef = element}>
                 <input type="text" placeholder='Email' name='email' className='login-field' onChange={e => this.handleForm(e)}/>
                 <input type="password" placeholder='Password' name='password' className='login-field' onChange={e => this.handleForm(e)}/>
-                <button className='login-button' onClick={() => handleLogin(this.state.email, this.state.password)}>Login</button>
+                <button className='login-button' onClick={() => this.handleLogin(this.state.email, this.state.password)}>Login</button>
                 <h5>Don't have an account? <Link to='/signup'><b>Sign Up</b></Link></h5>
             </div>
     </div>
