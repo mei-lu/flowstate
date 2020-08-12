@@ -13,22 +13,20 @@ import Schedule from './pages/Schedule';
 function App() {
   return (
     <div className="App">
-      <Router>
-        <Switch>
-        <Route exact path='/' component={Landing}/>
-          <div>
-            <Navigation />
+        <Router>
+          <Navigation />
             <div className='full-width'>
-              <Route path='/tasks' component={Kanban}/>
-              <Route path='/schedule' component={Schedule}/>
-              <Route path='/pomodoro' component={Pomodoro}/>
-              <Route path='/dashboard' component={Dashboard}/>
-              <Route path='/login' component={Login}/>
-              <Route path='/signup' component={Signup}/>
+              <Switch>
+                <Route exact path='/' component={Landing}/>
+                <Route path='/tasks' component={Kanban}/>
+                <Route path='/schedule' component={Schedule}/>
+                <Route path='/pomodoro' component={Pomodoro}/>
+                <Route path='/dashboard' component={Dashboard}/>
+                <Route path='/login' component={Login}/>
+                <Route path='/signup' component={Signup}/>
+              </Switch>
             </div>
-          </div>
-        </Switch>
-      </Router>
+        </Router>
     </div>
   );
 }

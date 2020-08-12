@@ -1,5 +1,5 @@
 import React from 'react';
-import {withRouter, Link} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import Logo from '../Logo';
 import DashboardIcon from '../../img/dashboard.svg';
 import TasksIcon from '../../img/tasks.svg';
@@ -19,4 +19,4 @@ class Navigation extends React.Component {
     }
 }
 
-export default withRouter(Navigation);
+export default Navigation;
