@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import {Link, Redirect} from 'react-router-dom';
 import {gsap} from 'gsap';
 
 class Login extends React.Component{
@@ -8,7 +8,8 @@ class Login extends React.Component{
         this.state = {
             email: '',
             password: '',
-            alert: ''
+            alert: '',
+            redirect: null
         }
     }
     // Handle on page load GSAP animations
@@ -36,7 +37,8 @@ class Login extends React.Component{
             credentials: 'include',
             headers: {
                 'Content-Type': 'application/json',
-                'Accept': 'application/json',            },
+                'Accept': 'application/json',            
+            },
             body: JSON.stringify({
                 email: email,
                 password: password
@@ -47,14 +49,14 @@ class Login extends React.Component{
                 this.setState({alert: 'Incorrect email or password'});
                 return;
             }  else {
-                response.json();
+                this.setState({redirect: 'dashboard'});
             }
         })
-        .catch(console.log('Unable to log in.'));
     }
 
     render() {
         return <div>
+            {this.state.redirect ? <Redirect to='dashboard'/> : null}
             {this.state.alert ? this.state.alert : null}
             <h2 ref={element => this.headingRef = element}>Login</h2>
             <div className='login-form' ref={element => this.loginRef = element}>
