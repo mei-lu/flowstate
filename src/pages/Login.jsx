@@ -33,10 +33,10 @@ class Login extends React.Component{
         }
         await fetch(`${process.env.REACT_APP_API_BASE}/api/login`, {
             method: 'POST',
+            credentials: 'include',
             headers: {
                 'Content-Type': 'application/json',
-                'Accept': 'application/json'
-            },
+                'Accept': 'application/json',            },
             body: JSON.stringify({
                 email: email,
                 password: password
@@ -48,7 +48,6 @@ class Login extends React.Component{
                 return;
             }  else {
                 response.json();
-                console.log(response);
             }
         })
         .catch(console.log('Unable to log in.'));
