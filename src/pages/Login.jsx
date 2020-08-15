@@ -56,7 +56,7 @@ class Login extends React.Component{
 
     render() {
         return <div>
-            {this.state.redirect ? <Redirect to='dashboard'/> : null}
+            {this.state.redirect ? <Redirect to={this.state.redirect}/> : null}
             {this.state.alert ? this.state.alert : null}
             <h2 ref={element => this.headingRef = element}>Login</h2>
             <div className='login-form' ref={element => this.loginRef = element}>
