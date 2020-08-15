@@ -38,7 +38,7 @@ class Navigation extends React.Component {
             <Link to='/tasks'><img className='nav-icons' src={TasksIcon} alt=''/></Link>
             <Link to='/schedule'><img className='nav-icons' src={CalendarIcon} alt=''/></Link>
             <Link to='/pomodoro'><img className='nav-icons' src={TimerIcon} alt=''/></Link>
-            <img className='nav-icons' src={LogoutIcon} alt='' onClick={this.logout}/>
+            <Link to='/'><img className='nav-icons' src={LogoutIcon} alt='' onClick={this.logout}/></Link>
         </div>
     }
 }
