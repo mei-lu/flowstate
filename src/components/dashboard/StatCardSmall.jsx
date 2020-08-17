@@ -1,11 +1,11 @@
 import React from 'react';
 
-class StatCardSmall extends React.Component {
-    render() {
-        return <div className='statcard-small'>
+function StatCardSmall() {
+    
+    return <div className='statcard-small'>
             <p>{this.props.title}</p>
             <p>{this.props.data}</p>
         </div>
     }
-}
+    
 export default StatCardSmall;
