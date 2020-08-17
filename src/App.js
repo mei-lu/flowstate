@@ -10,6 +10,8 @@ import Dashboard from './pages/Dashboard';
 import Kanban from './pages/Kanban';
 import Schedule from './pages/Schedule';
 
+const AuthContext = React.createContext(false);
+
 function App() {
   return (
     <div className="App">
