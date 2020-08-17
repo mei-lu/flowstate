@@ -13,7 +13,6 @@ function Login() {
 
     //Set context to update global authentication state
     const { authStatus, setAuthStatus } = React.useContext(AuthContext);
-    console.log(React.useContext(AuthContext));
 
     // // Handle on page load GSAP animations
     // React.useEffect(() => {
@@ -53,7 +52,7 @@ function Login() {
                 setState({alert: 'Incorrect email or password'});
                 return;
             }  else {
-                // toggleAuth(true);
+                setAuthStatus(true);
                 setState({redirect: 'dashboard'});
             }
         })
