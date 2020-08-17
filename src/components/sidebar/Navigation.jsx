@@ -27,17 +27,15 @@ function Navigation () {
         })
     }
 
-    render() {
-        return <div className='nav-labels'>
-            {redirect ? <Redirect to={redirect} /> : null}
-            <div className='logo'><Logo/></div>
-            <Link to='/dashboard'><img className='nav-icons' src={DashboardIcon} alt=''/></Link>
-            <Link to='/tasks'><img className='nav-icons' src={TasksIcon} alt=''/></Link>
-            <Link to='/schedule'><img className='nav-icons' src={CalendarIcon} alt=''/></Link>
-            <Link to='/pomodoro'><img className='nav-icons' src={TimerIcon} alt=''/></Link>
-            <Link to='/'><img className='nav-icons' src={LogoutIcon} alt='' onClick={logout}/></Link>
-        </div>
-    }
+    return <div className='nav-labels'>
+        {redirect ? <Redirect to={redirect} /> : null}
+        <div className='logo'><Logo/></div>
+        <Link to='/dashboard'><img className='nav-icons' src={DashboardIcon} alt=''/></Link>
+        <Link to='/tasks'><img className='nav-icons' src={TasksIcon} alt=''/></Link>
+        <Link to='/schedule'><img className='nav-icons' src={CalendarIcon} alt=''/></Link>
+        <Link to='/pomodoro'><img className='nav-icons' src={TimerIcon} alt=''/></Link>
+        <Link to='/'><img className='nav-icons' src={LogoutIcon} alt='' onClick={logout}/></Link>
+    </div>
 }
 
 export default Navigation;
