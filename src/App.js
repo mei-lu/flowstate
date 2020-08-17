@@ -8,18 +8,22 @@ import Signup from './pages/Signup';
 import Landing from './pages/Landing';
 
 function App() {
+
+  const [authStatus, setAuthStatus] = React.useState(false);
+
   return (
     <div className="App">
         <Router>
             <div className='full-width'>
-              <AuthContext>
+              <AuthContext.Provider value={{authStatus, setAuthStatus}}>
                 <Switch>
-                  {useContext(AuthContext) ? <ProtectedRoutes/> : null}
+                  {authStatus ? <ProtectedRoutes/> : null}
                   <Route exact path='/' component={Landing}/>
                   <Route path='/login' component={Login}/>
                   <Route path='/signup' component={Signup}/>
+                  <Route component={Landing}/>
                 </Switch>
-              </AuthContext>
+              </AuthContext.Provider>
             </div>
         </Router>
     </div>

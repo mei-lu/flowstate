@@ -8,7 +8,7 @@ import Navigation from '../sidebar/Navigation';
 
 
 function ProtectedRoutes() { 
-    return <div> <Navigation />
+    return <div><Navigation />
         <Route path='/tasks' component={Kanban}/>
         <Route path='/schedule' component={Schedule}/>
         <Route path='/pomodoro' component={Pomodoro}/>
