@@ -36,7 +36,7 @@ function ContributionGraph() {
             <li>Sat</li>
         </ul>
         <ul className='squares'>
-            {hardCodeSquares}
+            {hardCodeSquares()}
         </ul>
     </div>
 }

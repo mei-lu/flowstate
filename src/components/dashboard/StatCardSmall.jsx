@@ -1,10 +1,9 @@
 import React from 'react';
 
-function StatCardSmall() {
-    
+function StatCardSmall(props) {
     return <div className='statcard-small'>
-            <p>{this.props.title}</p>
-            <p>{this.props.data}</p>
+            <p>{props.title}</p>
+            <p>{props.data}</p>
         </div>
     }
     
