@@ -1,20 +1,18 @@
 import React, { useRef } from 'react';
 import { AuthContext } from '../components/auth/AuthContext';
-import { Link, Redirect } from 'react-router-dom';
+import { Link, Redirect, useHistory, useLocation } from 'react-router-dom';
+import Profile from '../utils/Profile';
 import { gsap } from 'gsap';
 
-function Login() {
+function Login(props) {
     const [state, setState] = React.useState({
         email: '',
         password: '',
         alert: '',
-        redirect: null
     });
-
-    //Set context to update global authentication state
     const { authStatus, setAuthStatus } = React.useContext(AuthContext);
-    console.log(authStatus);
-
+    let location = useLocation();
+    let history = useHistory();
     // // Handle on page load GSAP animations
     // React.useEffect(() => {
     //     let timeline = gsap.timeline();
@@ -30,37 +28,23 @@ function Login() {
         });
     }
 
-    // POST login information
+    // Verify all fields filled and login
     const handleLogin = async (email, password) => {
         if (!email || !password) {
-            setState({...state, alert: 'Missing email or password'});
-            return
+            setState({ ...state, alert: 'Missing email or password' });
+            return;
         }
-        await fetch(`${process.env.REACT_APP_API_BASE}/api/login`, {
-            method: 'POST',
-            credentials: 'include',
-            headers: {
-                'Content-Type': 'application/json',
-                'Accept': 'application/json',            
-            },
-            body: JSON.stringify({
-                email: email,
-                password: password
-            }),
-        })
-        .then(response => {
-            if (!response.ok) {
-                setState({alert: 'Incorrect email or password'});
-                return;
-            }  else {
-                setAuthStatus(true);
-                setState({redirect: 'dashboard'});
+        Profile.login(email, password, ()=> {
+            if (!Profile.authenticated) {
+                setState({ ...state, alert: 'Incorrect email or password' });
+            } else {
+                let { from } = location.state || { from: { pathname: '/dashboard' } };
+                history.replace(from);
             }
-        })
+        });
     }
 
     return <div>
-        {state.redirect ? <Redirect to={state.redirect}/> : null}
         {state.alert ? state.alert : null}
         <h2>Login</h2>
         <div className='login-form'>
