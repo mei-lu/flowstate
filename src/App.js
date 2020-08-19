@@ -11,13 +11,6 @@ import Navigation from './components/navigation/Navigation';
 
 function App() {
   
-// Verify if JWT is validated in order to persist users on refresh
-  useEffect(() => {
-    Profile.verify(async () => {
-      await console.log('auth status', Profile.authenticated);
-    });
-  }, []);
-
   return (
     <div className="App">
         <Router>
