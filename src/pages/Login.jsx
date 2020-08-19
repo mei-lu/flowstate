@@ -1,5 +1,4 @@
 import React, { useRef } from 'react';
-import { AuthContext } from '../components/auth/AuthContext';
 import { Link, Redirect, useHistory, useLocation } from 'react-router-dom';
 import Profile from '../utils/Profile';
 import { gsap } from 'gsap';
@@ -10,7 +9,7 @@ function Login(props) {
         password: '',
         alert: '',
     });
-    const { authStatus, setAuthStatus } = React.useContext(AuthContext);
+
     let location = useLocation();
     let history = useHistory();
     // // Handle on page load GSAP animations
