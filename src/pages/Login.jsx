@@ -1,8 +1,8 @@
-import React, { useRef } from 'react';
-import { Link, Redirect, useHistory, useLocation } from 'react-router-dom';
+import React from 'react';
+import { Link, useHistory, useLocation } from 'react-router-dom';
 import Context from '../utils/Context';
 import Auth from '../utils/Auth';
-import { gsap } from 'gsap';
+// import { gsap } from 'gsap';
 
 function Login() {
     const [state, setState] = React.useState({
@@ -11,13 +11,21 @@ function Login() {
         alert: '',
     });
 
+    let location = useLocation();
+
     const context = React.useContext(Context);
     React.useEffect(()=> {
         console.log(context.authState)
-        checkAuth()
-    },[context]);
+        const checkAuth = () => {
+            if (context.authState) {
+                let { from } = location.state || { from: { pathname: '/dashboard' } };
+                history.push(from);
+                console.log('checkauth is passed')
+            }
+        }
+        checkAuth();
+    });
     
-    let location = useLocation();
     let history = useHistory();
     // // Handle on page load GSAP animations
     // React.useEffect(() => {
@@ -44,14 +52,6 @@ function Login() {
         Auth.login(email, password, () => {
             context.handleLogin();
         });
-    }
-
-    const checkAuth = () => {
-        if (context.authState) {
-            let { from } = location.state || { from: { pathname: '/dashboard' } };
-            history.push('/dashboard');
-            console.log('checkauth is passed')
-        }
     }
 
     return <div>

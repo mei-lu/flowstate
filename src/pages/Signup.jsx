@@ -1,6 +1,6 @@
 import React from 'react';
-import {Link, useHistory} from 'react-router-dom';
-import {gsap} from 'gsap';
+import { Link } from 'react-router-dom';
+// import {gsap} from 'gsap';
 
 function Signup() {
     const [state, setState]  = React.useState({
@@ -11,7 +11,7 @@ function Signup() {
         alert: null,
     });
 
-    const history = useHistory();
+    // const history = useHistory();
 
     // componentDidMount() {
     //     let timeline = gsap.timeline();

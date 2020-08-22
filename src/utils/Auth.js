@@ -1,5 +1,3 @@
-import ContextState from './ContextState';
-
 // Functions related to authentication
 class Auth {
     constructor() {
@@ -43,7 +41,7 @@ class Auth {
           
     }
 
-    logout() {
+    logout(callback) {
         fetch(`${process.env.REACT_APP_API_BASE}/api/logout`, {
             method: 'POST',
             credentials: 'include',
@@ -53,9 +51,7 @@ class Auth {
             },
         })
         .then(response => {
-            if (response.ok) {
-                this.setState({authenticated: false});
-            }
+            callback();
         })
     }
 

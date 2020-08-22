@@ -8,10 +8,8 @@ import Landing from './pages/Landing';
 import Dashboard from './pages/Dashboard';
 import Navigation from './components/navigation/Navigation';
 import ContextState from './utils/ContextState';
-import Auth from './utils/Auth';
 
 function App() {
-  
   return (
     <div className="App">
         <Router>
@@ -24,7 +22,7 @@ function App() {
                   <Route path='/signup' component={Signup}/>
 
                   {/* Private Routes */}
-                  {/* <Navigation /> */}
+                  <Navigation />
                   <ProtectedRoute path='/dashboard' component={Dashboard}/>
                 </ContextState>
               </Switch>
