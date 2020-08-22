@@ -6,7 +6,6 @@ import Login from './pages/Login';
 import Signup from './pages/Signup';
 import Landing from './pages/Landing';
 import Dashboard from './pages/Dashboard';
-import Navigation from './components/navigation/Navigation';
 import ContextState from './utils/ContextState';
 
 function App() {
@@ -22,7 +21,6 @@ function App() {
                   <Route path='/signup' component={Signup}/>
 
                   {/* Private Routes */}
-                  <Navigation />
                   <ProtectedRoute path='/dashboard' component={Dashboard}/>
                 </ContextState>
               </Switch>

@@ -12,7 +12,7 @@ import Auth from '../../utils/Auth';
 function Navigation () {
     let history = useHistory();
     const context = React.useContext(Context);
-
+    
     return <div className='nav-wrapper'>
         <div className='nav'>
             <div className='logo'><Logo/></div>
@@ -27,7 +27,6 @@ function Navigation () {
                 });
             }}><img className='nav-icons' src={LogoutIcon} alt='' /></div>
         </div>
-        
     </div>
 }
 
