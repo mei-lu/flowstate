@@ -4,7 +4,7 @@ import StatCardSmall from '../components/dashboard/StatCardSmall';
 import ProfilePic from '../img/ProfilePic.jpg';
 
 function Dashboard() {
-    return <div className='full-width'>
+    return(
         <div className='dashboard-tiles'>
             <div className='profile-section'>
                 <div className='profile-card'>
@@ -32,6 +32,6 @@ function Dashboard() {
                 <ContributionGraph/>
             </div>
         </div>
-    </div>
+    );
 }
 export default Dashboard;

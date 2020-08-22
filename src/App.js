@@ -12,19 +12,17 @@ function App() {
   return (
     <div className="App">
         <Router>
-            <div className='full-width'>
-              <Switch>
-                <ContextState>
-                  {/* Public routes */}
-                  <Route exact path='/' component={Landing}/>
-                  <Route path='/login' component={Login}/>
-                  <Route path='/signup' component={Signup}/>
+            <Switch>
+              <ContextState>
+                {/* Public routes */}
+                <Route exact path='/' component={Landing}/>
+                <Route path='/login' component={Login}/>
+                <Route path='/signup' component={Signup}/>
 
-                  {/* Private Routes */}
-                  <ProtectedRoute path='/dashboard' component={Dashboard}/>
-                </ContextState>
-              </Switch>
-            </div>
+                {/* Private Routes */}
+                <ProtectedRoute path='/dashboard' component={Dashboard}/>
+              </ContextState>
+            </Switch>
         </Router>
     </div>
   );

@@ -18,15 +18,11 @@ body > #root > div {
   font-family: 'Poppins', sans-serif;
   color: rgb(64, 58, 80);
   min-height: 100vh;
-}
-
-.full-width {
-  height: 100%;
-  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
 
 h5 {
   font-weight: 400;

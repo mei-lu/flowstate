@@ -1,12 +1,10 @@
-  .nav-wrapper {
+  
+  .nav {
     top: 0;
     left: 0;
     overflow-x: hidden;
     position: fixed;
-  }
-  
-  .nav {
-    height: 100vh;
+    height: 100%;
     float: left;
     display: flex;
     flex-direction: column;
