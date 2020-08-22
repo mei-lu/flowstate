@@ -1,7 +1,6 @@
 import React from 'react';
 import {Link, useHistory} from 'react-router-dom';
 import {gsap} from 'gsap';
-import Profile from '../utils/Profile';
 
 function Signup() {
     const [state, setState]  = React.useState({
@@ -29,9 +28,9 @@ function Signup() {
             setState({ ...state, alert: 'Passwords don\'t match' });
             return;
         }
-        Profile.signup(() => {
-            history.push('/dashboard');
-        });
+        // Profile.signup(() => {
+        //     history.push('/dashboard');
+        // });
     }
 
     const handleForm = async (e) => {

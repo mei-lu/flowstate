@@ -1,30 +1,17 @@
 import React from 'react';
-import { Route, Redirect, useHistory } from 'react-router-dom';
-import Profile from '../../utils/Profile';
+import { Route, Redirect } from 'react-router-dom';
+import Context from '../../utils/Context';
 
 const ProtectedRoute = ({ component: Component, ...rest }) => {
-    const [state, setState] = React.useState({
-        loading: true,
-        authStatus: false,
-    });
-
-    const history = useHistory();
-
-    // Verify if JWT is validated in order to persist users on refresh
-    React.useEffect(() => {
-        Profile.verify(() => {
-            if (Profile.authenticated) {
-                    setState({ ...state, loading: false, authStatus: true });
-            } else {
-                history.replace('/login');
-            }
-        })
-    }, []);
-
+    const context = React.useContext(Context);
+React.useEffect(()=> {
+    console.log(context.authState)
+}, [context])
     return (
-        <Route {...rest} render={props => state.authStatus ? <Component {...props} /> 
-        : state.loading ? <div>Loading...</div> : <Redirect to={{ pathname: '/login', state: { from: props.location }} } />
-        }/>
+        <Route {...rest} render={props => context.authState ? <Component {...props} /> 
+         : <Redirect to={{ pathname: '/login', state: { from: props.location }} } />
+         }/>
+            
     )
 
 }

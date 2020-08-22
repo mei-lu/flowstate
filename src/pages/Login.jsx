@@ -1,15 +1,22 @@
 import React, { useRef } from 'react';
 import { Link, Redirect, useHistory, useLocation } from 'react-router-dom';
-import Profile from '../utils/Profile';
+import Context from '../utils/Context';
+import Auth from '../utils/Auth';
 import { gsap } from 'gsap';
 
-function Login(props) {
+function Login() {
     const [state, setState] = React.useState({
         email: '',
         password: '',
         alert: '',
     });
 
+    const context = React.useContext(Context);
+    React.useEffect(()=> {
+        console.log(context.authState)
+        checkAuth()
+    },[context]);
+    
     let location = useLocation();
     let history = useHistory();
     // // Handle on page load GSAP animations
@@ -28,19 +35,23 @@ function Login(props) {
     }
 
     // Verify all fields filled and login
-    const handleLogin = async (email, password) => {
+    const handleLogin = (email, password) => {
         if (!email || !password) {
             setState({ ...state, alert: 'Missing email or password' });
             return;
         }
-        Profile.login(email, password, ()=> {
-            if (!Profile.authenticated) {
-                setState({ ...state, alert: 'Incorrect email or password' });
-            } else {
-                let { from } = location.state || { from: { pathname: '/dashboard' } };
-                history.replace(from);
-            }
+        
+        Auth.login(email, password, () => {
+            context.handleLogin();
         });
+    }
+
+    const checkAuth = () => {
+        if (context.authState) {
+            let { from } = location.state || { from: { pathname: '/dashboard' } };
+            history.push('/dashboard');
+            console.log('checkauth is passed')
+        }
     }
 
     return <div>
