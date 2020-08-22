@@ -14,6 +14,7 @@ function Login() {
     let location = useLocation();
 
     const context = React.useContext(Context);
+    
     React.useEffect(()=> {
         console.log(context.authState)
         const checkAuth = () => {
