@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
 @import './style/Dashboard.css';
-@import './style/Navigation.css';
 @import './style/Pomodoro.css';
 @import './style/Tasks.css';
 @import './style/Auth.css';
+@import './style/Assets.css';
+@import './style/Landing.css';
 
 body > #root > div {
   height: 100vh;

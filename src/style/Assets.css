@@ -1,0 +1,53 @@
+/* Styles for common assets */
+
+/* Buttons */
+.solid-button {
+    border-radius: 50px;
+    width: fit-content;
+    margin: 1em;
+    padding: .8em 3em;
+    outline: none;
+    border: none;
+    background-color: rgb(167, 172, 248);
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-size: .9em;
+  }
+
+  .outlined-button {
+    border-radius: 50px;
+    width: fit-content;
+    margin: 1em;
+    padding: .8em 3em;
+    outline: none;
+    border: 2px solid rgb(167, 172, 248);
+    background-color: #fff;
+    color: rgb(167, 172, 248);
+    font-family: 'Poppins', sans-serif;
+    font-size: .9em;
+  }
+
+/* Main App Nav Bar */
+  .nav {
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    position: fixed;
+    height: 100%;
+    float: left;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(236, 231, 250);
+    margin-right: 2rem;
+  }
+
+  .nav-icons {
+    width: 1.5rem;
+    margin: 1rem;
+  }
+
+  /* Logo */
+  .logo {
+      font-weight: 700;
+      font-size: 1.3rem;
+  }

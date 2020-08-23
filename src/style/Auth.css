@@ -1,3 +1,5 @@
+/* Styles for Login and Sign Up pages */
+
 /* Login Page */
 .login-form {
     display: flex;
@@ -21,17 +23,4 @@
   ::placeholder {
     color: #3F4573;
     font-family: 'Poppins', sans-serif;
-  }
-  
-  .login-button {
-    border-radius: 50px;
-    width: fit-content;
-    margin: 1em;
-    padding: .8em 3em;
-    outline: none;
-    border: none;
-    background-color: rgb(167, 172, 248);
-    color: #fff;
-    font-family: 'Poppins', sans-serif;
-    font-size: .9em;
   }

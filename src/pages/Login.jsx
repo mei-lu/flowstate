@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, useHistory, useLocation } from 'react-router-dom';
 import Context from '../utils/Context';
 import Auth from '../utils/Auth';
+import SolidButton from '../components/assets/SolidButton';
 // import { gsap } from 'gsap';
 
 function Login() {
@@ -61,7 +62,7 @@ function Login() {
         <div className='login-form'>
             <input type="text" placeholder='Email' name='email' className='login-field' onChange={e => handleForm(e)}/>
             <input type="password" placeholder='Password' name='password' className='login-field' onChange={e => handleForm(e)}/>
-            <button className='login-button' onClick={() => handleLogin(state.email, state.password)}>Login</button>
+            <SolidButton onClick={() => handleLogin(state.email, state.password)} name='Login' />
             <h5>Don't have an account? <Link to='/signup'><b>Sign Up</b></Link></h5>
         </div>
     </div>
