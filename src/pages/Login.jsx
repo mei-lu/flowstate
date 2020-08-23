@@ -3,6 +3,7 @@ import { Link, useHistory, useLocation } from 'react-router-dom';
 import Context from '../utils/Context';
 import Auth from '../utils/Auth';
 import SolidButton from '../components/assets/SolidButton';
+import PublicNav from '../components/navigation/PublicNav';
 // import { gsap } from 'gsap';
 
 function Login() {
@@ -57,6 +58,7 @@ function Login() {
     }
 
     return <div>
+        <PublicNav />
         {state.alert ? state.alert : null}
         <h2>Login</h2>
         <div className='login-form'>

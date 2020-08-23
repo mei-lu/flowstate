@@ -1,6 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 // import {gsap} from 'gsap';
+import SolidButton from '../components/assets/SolidButton';
+import Auth from '../utils/Auth';
+import PublicNav from '../components/navigation/PublicNav';
 
 function Signup() {
     const [state, setState]  = React.useState({
@@ -38,14 +41,15 @@ function Signup() {
     }
 
     return <div>
+        <PublicNav/>
         {state.alert ? state.alert : null}
-        <h2 ref='headingRef'>Sign Up</h2>
-        <form className='login-form' ref='signupRef'>
+        <h2>Sign Up</h2>
+        <form className='login-form'>
             <input type="text" placeholder='Name' name='name' className='login-field' onChange={e => handleForm(e)}/>
             <input type="text" placeholder='Email' name='email' className='login-field' onChange={e => handleForm(e)}/>
             <input type="password" placeholder='Password' name='password' className='login-field' onChange={e => handleForm(e)}/>
             <input type="password" placeholder='Confirm Password' name='confirmPassword' className='login-field' onChange={e => handleForm(e)}/>
-            <button className='login-button' onClick={e => signUpUser(e)}>Sign Up</button>
+            <SolidButton onClick={e => signUpUser(e)} name='Sign Up' />
             <h5>Already have an account? <Link to='/login'><b>Login</b></Link></h5>
         </form>
     </div>
