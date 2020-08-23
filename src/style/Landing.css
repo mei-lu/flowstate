@@ -1,20 +1,2 @@
 /* Styles for Landing page */
 
-.landing-nav {
-    position: fixed;
-    padding: 1rem;
-    box-sizing: border-box;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    top: 0;
-    left: 0;
-}
-.landing-nav-labels-wrapper {
-    display: flex;
-}
-
-.landing-nav-labels {
-    margin-left: 2rem;
-}

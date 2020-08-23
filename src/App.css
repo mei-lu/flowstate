@@ -5,6 +5,7 @@
 @import './style/Auth.css';
 @import './style/Assets.css';
 @import './style/Landing.css';
+@import './style/CommonVars.css';
 
 body > #root > div {
   height: 100vh;
@@ -17,7 +18,7 @@ body > #root > div {
   height: 100%;
   width: 100%;
   font-family: 'Poppins', sans-serif;
-  color: rgb(64, 58, 80);
+  color: var(--body-text-color);
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -44,7 +45,7 @@ h2 {
 }
 
 a {
-  color: rgb(150, 155, 223);
+  color:  var(--main-color);
   text-decoration: none;
 }
 

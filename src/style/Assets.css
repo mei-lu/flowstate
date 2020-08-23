@@ -1,3 +1,4 @@
+@import './CommonVars.css';
 /* Styles for common assets */
 
 /* Buttons */
@@ -8,7 +9,7 @@
     padding: .8em 3em;
     outline: none;
     border: none;
-    background-color: rgb(167, 172, 248);
+    background-color: var(--main-color);
     color: #fff;
     font-family: 'Poppins', sans-serif;
     font-size: .9em;
@@ -20,9 +21,9 @@
     margin: 1em;
     padding: .8em 3em;
     outline: none;
-    border: 2px solid rgb(167, 172, 248);
+    border: 2px solid var(--main-color);
     background-color: #fff;
-    color: rgb(167, 172, 248);
+    color: var(--main-color);
     font-family: 'Poppins', sans-serif;
     font-size: .9em;
   }
@@ -51,3 +52,30 @@
       font-weight: 700;
       font-size: 1.3rem;
   }
+
+  /* Public Nav Bar */
+  .landing-nav {
+    position: fixed;
+    padding: 1rem;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.landing-nav-labels-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.landing-nav-labels {
+    margin-left: 2rem;
+}
+
+.landing-nav-button {
+    margin: 0;
+    padding: .5em 1em;
+}
