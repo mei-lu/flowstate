@@ -11,11 +11,11 @@ import { ReactComponent as WholesomeImage2 } from '../img/landing/3.svg';
 function Landing() {
     return <div>
         <PublicNav />
-        <HeroSection 
-            image={<WholesomeImage height={500}/>} 
+        <div id='features'><HeroSection 
+            image={<WholesomeImage height={400}/>} 
             heading='2 in 1 Productivity' 
-            body='test' 
-        />
+            body='Combining kanban boards and the pomodoro method to get you into flow' 
+        /></div>
         {/* <WholesomeImage1 height={500}/>
         <WholesomeImage2 height={500}/> */}
     </div>

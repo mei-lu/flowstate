@@ -9,9 +9,9 @@ const PublicNav = (props) => {
         <div className='landing-nav'>
             <div><Logo/></div>
             <div className='landing-nav-labels-wrapper'>
-                <div className='landing-nav-labels'><Link to='/about'>About</Link></div>
-                <div className='landing-nav-labels'><Link to='/features'>Features</Link></div>
-                <div className='landing-nav-labels'><Link to='/contact'>Contact</Link></div>
+                <div className='landing-nav-labels'><a href='#features'>Features</a></div>
+                <div className='landing-nav-labels'><a href='#about'>About</a></div>
+                <div className='landing-nav-labels'><a href='#contact'>Contact</a></div>
                 <div className='landing-nav-labels'>
                     <Link to='/login'><SolidButton name='Login' style='landing-nav-button' /></Link>
                     <Link to='/signup'><OutlinedButton name='Sign Up' style='landing-nav-button' /></Link>
