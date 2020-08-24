@@ -2,7 +2,6 @@ import React from 'react';
 import { Link, useHistory, useLocation } from 'react-router-dom';
 import Context from '../utils/Context';
 import Auth from '../utils/Auth';
-import SolidButton from '../components/assets/SolidButton';
 // import { gsap } from 'gsap';
 
 function Login() {
@@ -13,11 +12,9 @@ function Login() {
     });
 
     let location = useLocation();
-
     const context = React.useContext(Context);
     
     React.useEffect(()=> {
-        console.log(context.authState)
         const checkAuth = () => {
             if (context.authState) {
                 let { from } = location.state || { from: { pathname: '/dashboard' } };
@@ -62,7 +59,7 @@ function Login() {
         <div className='login-form'>
             <input type="text" placeholder='Email' name='email' className='login-field' onChange={e => handleForm(e)}/>
             <input type="password" placeholder='Password' name='password' className='login-field' onChange={e => handleForm(e)}/>
-            <SolidButton onClick={() => handleLogin(state.email, state.password)} name='Login' />
+            <button className='solid-button' onClick={() => handleLogin(state.email, state.password)}>Login</button>
             <h5>Don't have an account? <Link to='/signup'><b>Sign Up</b></Link></h5>
         </div>
     </div>

@@ -55,7 +55,7 @@ class Auth {
         })
     }
 
-    signup(name, email, password) {
+    signUp = (name, email, password, callback) => {
         fetch(`${process.env.REACT_APP_API_BASE}/api/signup`, {
             method: 'POST',
             credentials: 'include',
@@ -70,12 +70,10 @@ class Auth {
             }),
         })
         .then(response => {
-            if (!response.ok) {
-                this.setState({authenticated: false});
-            } else {
-                this.setState({authenticated: true});
+            if (response.ok) {
+                callback();
             }
-        })
+        });
     }
 }
 

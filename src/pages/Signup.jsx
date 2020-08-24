@@ -1,8 +1,9 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useHistory, useLocation } from 'react-router-dom';
 // import {gsap} from 'gsap';
 import SolidButton from '../components/assets/SolidButton';
 import Auth from '../utils/Auth';
+import Context from '../utils/Context';
 
 function Signup() {
     const [state, setState]  = React.useState({
@@ -21,18 +22,33 @@ function Signup() {
     //     timeline.from(signupRef, .5, {opacity: 0}, '-=.5')
     // }
 
+    const context = React.useContext(Context);
+    let history = useHistory();
+    const location = useLocation();
+
+    React.useEffect(()=> {
+        const checkAuth = () => {
+            if (context.authState) {
+                let { from } = location.state || { from: { pathname: '/dashboard' } };
+                history.push(from);
+                console.log('checkauth is passed')
+            }
+        }
+        checkAuth();
+    });
+
     const signUpUser = async (e) => {
-        e.preventDefault();
         if (!state.email || !state.name || !state.password || !state.confirmPassword) {
             setState({ ...state, alert: 'Please complete all fields' });
             return;
-        } else if (state.password !== this.state.confirmPassword) {
+        } else if (state.password !== state.confirmPassword) {
             setState({ ...state, alert: 'Passwords don\'t match' });
             return;
         }
-        // Profile.signup(() => {
-        //     history.push('/dashboard');
-        // });
+
+        Auth.signUp(state.name, state.email, state.password, () => {
+            context.handleLogin();
+        });
     }
 
     const handleForm = async (e) => {
@@ -42,14 +58,14 @@ function Signup() {
     return <div>
         {state.alert ? state.alert : null}
         <h2>Sign Up</h2>
-        <form className='login-form'>
-            <input type="text" placeholder='Name' name='name' className='login-field' onChange={e => handleForm(e)}/>
+        <div className='login-form'>
+            <input type="text" placeholder='First Name' name='name' className='login-field' onChange={e => handleForm(e)}/>
             <input type="text" placeholder='Email' name='email' className='login-field' onChange={e => handleForm(e)}/>
             <input type="password" placeholder='Password' name='password' className='login-field' onChange={e => handleForm(e)}/>
             <input type="password" placeholder='Confirm Password' name='confirmPassword' className='login-field' onChange={e => handleForm(e)}/>
-            <SolidButton onClick={e => signUpUser(e)} name='Sign Up' />
+            <button className='solid-button' onClick={() => signUpUser()}>Sign Up</button>
             <h5>Already have an account? <Link to='/login'><b>Login</b></Link></h5>
-        </form>
+        </div>
     </div>
     
 }

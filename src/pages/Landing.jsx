@@ -12,7 +12,7 @@ function Landing() {
     return <div>
         <PublicNav />
         <div id='features'><HeroSection 
-            image={<WholesomeImage height={400}/>} 
+            image={<WholesomeImage height={450}/>} 
             heading='2 in 1 Productivity' 
             body='Combining kanban boards and the pomodoro method to get you into flow' 
         /></div>
