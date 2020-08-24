@@ -1,2 +1,22 @@
 /* Styles for Landing page */
 
+/* Hero Section */
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 2rem;
+}
+
+.hero-heading {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.hero-body {
+    font-size: 1.5rem;
+}
+.hero-image {
+    
+}

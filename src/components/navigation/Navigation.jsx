@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, useHistory } from 'react-router-dom';
-import Logo from '../Logo';
+import Logo from '../assets/Logo';
 import DashboardIcon from '../../img/dashboard.svg';
 import TasksIcon from '../../img/tasks.svg';
 import CalendarIcon from '../../img/calendar.svg';

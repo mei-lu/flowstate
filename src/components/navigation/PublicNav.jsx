@@ -1,5 +1,5 @@
 import React from 'react';
-import Logo from '../Logo';
+import Logo from '../assets/Logo';
 import SolidButton from '../assets/SolidButton';
 import OutlinedButton from '../assets/OutlinedButton';
 import { Link } from 'react-router-dom';
