@@ -13,10 +13,12 @@
     color: #fff;
     font-family: 'Poppins', sans-serif;
     font-size: .9em;
+    font-weight: bold;
   }
 
   .outlined-button {
     border-radius: 50px;
+    font-weight: bold;
     width: fit-content;
     margin: 1em;
     padding: .8em 3em;
@@ -56,7 +58,7 @@
   /* Public Nav Bar */
   .landing-nav {
     position: fixed;
-    padding: 1rem;
+    padding: 1.5rem;
     box-sizing: border-box;
     display: flex;
     align-items: center;
@@ -73,9 +75,14 @@
 
 .landing-nav-labels {
     margin-left: 2rem;
+    font-weight: bold;
+}
+
+.landing-nav-labels a {
+  color: var(--body-text-color);
 }
 
 .landing-nav-button {
     margin: 0 0 0 0.5rem;
-    padding: .5em 1em;
+    padding: .7em 1.5em;
 }
