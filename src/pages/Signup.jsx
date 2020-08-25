@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { Link, useHistory, useLocation } from 'react-router-dom';
-// import {gsap} from 'gsap';
+import {gsap} from 'gsap';
 import SolidButton from '../components/assets/SolidButton';
 import Auth from '../utils/Auth';
 import Context from '../utils/Context';
@@ -14,13 +14,15 @@ function Signup() {
         alert: null,
     });
 
-    // const history = useHistory();
+    // Refs for GSAP animations
+    let headingRef = useRef(null);
+    let signUpRef = useRef(null);
 
-    // componentDidMount() {
-    //     let timeline = gsap.timeline();
-    //     timeline.from(headingRef, .5, {opacity: 0, y: -50});
-    //     timeline.from(signupRef, .5, {opacity: 0}, '-=.5')
-    // }
+    React.useEffect(() => {
+        let timeline = gsap.timeline();
+        timeline.from(headingRef, .5, {opacity: 0, y: -50});
+        timeline.from(signUpRef, .5, {opacity: 0}, '-=.5')
+    })
 
     const context = React.useContext(Context);
     let history = useHistory();
@@ -57,8 +59,8 @@ function Signup() {
 
     return <div>
         {state.alert ? state.alert : null}
-        <h2>Sign Up</h2>
-        <div className='login-form'>
+        <h2 ref={e => headingRef = e}>Sign Up</h2>
+        <div className='login-form' ref={e => signUpRef = e}>
             <input type="text" placeholder='First Name' name='name' className='login-field' onChange={e => handleForm(e)}/>
             <input type="text" placeholder='Email' name='email' className='login-field' onChange={e => handleForm(e)}/>
             <input type="password" placeholder='Password' name='password' className='login-field' onChange={e => handleForm(e)}/>
