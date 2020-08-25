@@ -1,4 +1,7 @@
 /* Styles for Landing page */
+/* .landing {
+    margin-top: 20rem;
+} */
 
 /* Hero Section */
 .hero-section {
@@ -6,7 +9,8 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    padding: 2rem;
+    padding: .5rem;
+    box-sizing: border-box;
 }
 
 .hero-heading {
@@ -14,9 +18,10 @@
     font-weight: bold;
 }
 
-/* .hero-body {
-    
+.hero-body {
+    width: 25rem;
 }
+
 .hero-image {
-    
-} */
+    width: 35rem;
+}

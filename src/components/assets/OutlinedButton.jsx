@@ -1,7 +1,8 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const OutlinedButton = (props) => {
-    return <button className={`outlined-button ${props.style}`}>{props.name}</button>
+    return <Link to={props.link}><button className='outlined-button'>{props.name}</button></Link>
 }
 
 export default OutlinedButton;
