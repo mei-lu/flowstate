@@ -65,6 +65,9 @@ function Login() {
             <button className='solid-button' onClick={() => handleLogin(state.email, state.password)}>Login</button>
             <h5>Don't have an account? <Link to='/signup'><b>Sign Up</b></Link></h5>
         </div>
+        <div className='auth-sidebar'>
+
+        </div>
     </div>
 }
 export default Login;

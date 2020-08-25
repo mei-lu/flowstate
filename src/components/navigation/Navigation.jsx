@@ -1,11 +1,10 @@
 import React from 'react';
 import { Link, useHistory } from 'react-router-dom';
-import Logo from '../assets/Logo';
-import DashboardIcon from '../../img/dashboard.svg';
-import TasksIcon from '../../img/tasks.svg';
-import CalendarIcon from '../../img/calendar.svg';
-import TimerIcon from '../../img/timer.svg';
-import LogoutIcon from '../../img/logout.svg';
+import DashboardIcon from '../../img/navigation/dashboard.svg';
+import TasksIcon from '../../img/navigation/tasks.svg';
+import CalendarIcon from '../../img/navigation/calendar.svg';
+import TimerIcon from '../../img/navigation/timer.svg';
+import LogoutIcon from '../../img/navigation/logout.svg';
 import Context from '../../utils/Context';
 import Auth from '../../utils/Auth';
 

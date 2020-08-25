@@ -1,7 +1,7 @@
 import React from 'react';
-import Play from '../../img/play.svg';
-import Pause from '../../img/pause.svg';
-import Stop from '../../img/stop.svg'
+import Play from '../../img/timer/play.svg';
+import Pause from '../../img/timer/pause.svg';
+import Stop from '../../img/timer/stop.svg'
 import { gsap } from 'gsap';
 
 class Pomodoro extends React.Component {
