@@ -13,12 +13,10 @@
     color: #fff;
     font-family: 'Poppins', sans-serif;
     font-size: .9em;
-    font-weight: bold;
   }
 
   .outlined-button {
     border-radius: 50px;
-    font-weight: bold;
     width: fit-content;
     margin: 1em;
     padding: .8em 3em;

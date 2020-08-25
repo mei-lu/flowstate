@@ -1,9 +1,9 @@
 import React, { useRef } from 'react';
 import { Link, useHistory, useLocation } from 'react-router-dom';
 import {gsap} from 'gsap';
-import SolidButton from '../components/assets/SolidButton';
 import Auth from '../utils/Auth';
 import Context from '../utils/Context';
+import { ReactComponent as BackButton } from '../img/auth/backbutton.svg';
 
 function Signup() {
     const [state, setState]  = React.useState({
@@ -59,6 +59,7 @@ function Signup() {
 
     return <div>
         {state.alert ? state.alert : null}
+        <div className='back-button'><Link to='/'><BackButton height={40} /></Link></div>
         <h2 ref={e => headingRef = e}>Sign Up</h2>
         <div className='login-form' ref={e => signUpRef = e}>
             <input type="text" placeholder='First Name' name='name' className='login-field' onChange={e => handleForm(e)}/>

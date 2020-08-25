@@ -1,5 +1,13 @@
 /* Styles for Login and Sign Up pages */
 
+/* Back button for auth pages */
+.back-button {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 1rem;
+}
+
 /* Login Page */
 .login-form {
     display: flex;
@@ -14,13 +22,13 @@
     outline: none;
     border: 1px;
     width: 20em;
-    color: #3F4573;
+    color: var(--body-text-color);
     background-color: rgb(243, 243, 243);
     font-family: 'Poppins', sans-serif;
     
   }
   
   ::placeholder {
-    color: #3F4573;
+    color: var(--body-text-color);
     font-family: 'Poppins', sans-serif;
   }
