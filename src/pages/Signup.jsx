@@ -22,7 +22,7 @@ function Signup() {
         let timeline = gsap.timeline();
         timeline.from(headingRef, .5, {opacity: 0, y: -50});
         timeline.from(signUpRef, .5, {opacity: 0}, '-=.5')
-    })
+    },[])
 
     const context = React.useContext(Context);
     let history = useHistory();

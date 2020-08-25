@@ -20,11 +20,13 @@ function Login() {
     let headingRef = useRef(null);
     let loginRef = useRef(null);
 
-    React.useEffect(()=> {
+    React.useEffect(() => {
         let timeline = gsap.timeline();
         timeline.from(headingRef, .5, {y: -50, ease: 'power3', opacity: 0});
         timeline.from(loginRef, .5, {opacity: 0}, '-=.5')
+    }, []);
 
+    React.useEffect(()=> {
         const checkAuth = () => {
             if (context.authState) {
                 let { from } = location.state || { from: { pathname: '/dashboard' } };

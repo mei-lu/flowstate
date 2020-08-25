@@ -18,7 +18,7 @@ function Navigation () {
             <Link to='/dashboard'><img className='nav-icons' src={DashboardIcon} alt=''/></Link>
             <Link to='/tasks'><img className='nav-icons' src={TasksIcon} alt=''/></Link>
             <Link to='/schedule'><img className='nav-icons' src={CalendarIcon} alt=''/></Link>
-            <Link to='/pomodoro'><img className='nav-icons' src={TimerIcon} alt=''/></Link>
+            <Link to='/timer'><img className='nav-icons' src={TimerIcon} alt=''/></Link>
             <div onClick={() => {
                 Auth.logout(()=> {
                     context.handleLogout();

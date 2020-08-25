@@ -7,7 +7,7 @@ import Login from './pages/Login';
 import Signup from './pages/Signup';
 import Landing from './pages/Landing';
 import Dashboard from './pages/Dashboard';
-import Kanban from './pages/Kanban';
+import Kanban from './pages/Tasks';
 import Schedule from './pages/Schedule';
 import Timer from './pages/Timer';
 
@@ -24,7 +24,7 @@ function App() {
 
                 {/* Private Routes */}
                 <ProtectedRoute path='/dashboard' component={Dashboard}/>
-                <ProtectedRoute path='/kanban' component={Kanban}/>
+                <ProtectedRoute path='/tasks' component={Kanban}/>
                 <ProtectedRoute path='/timer' component={Timer}/>
                 <ProtectedRoute path='/schedule' component={Schedule}/>
               </ContextState>
