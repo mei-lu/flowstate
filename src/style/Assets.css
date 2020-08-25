@@ -49,8 +49,15 @@
 
   /* Logo */
   .logo {
-      font-weight: 700;
-      font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 1.5rem;
+  }
+
+  .logo-img {
+    padding: .5rem;
+    width: 3rem;
   }
 
   /* Public Nav Bar */
