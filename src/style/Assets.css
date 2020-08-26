@@ -59,35 +59,3 @@
     padding: .5rem;
     width: 3rem;
   }
-
-  /* Public Nav Bar */
-.landing-nav {
-  position: absolute;
-  padding: .5rem;
-  box-sizing: border-box;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  top: 0;
-  left: 0;
-}
-
-.landing-nav-labels-wrapper {
-    display: flex;
-    align-items: center;
-}
-
-.landing-nav-labels {
-    margin-left: 2rem;
-    font-weight: bold;
-}
-
-.landing-nav-labels a {
-  color: var(--body-text-color);
-}
-
-.landing-nav-button {
-    margin: 0 0 0 0.5rem;
-    padding: .7em 1.5em;
-}

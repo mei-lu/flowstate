@@ -10,7 +10,7 @@ import WholesomeImage2 from '../img/landing/3.svg';
 
 function Landing() {
     return <div className='landing'>
-        <PublicNav />
+        <div><PublicNav /></div>
         <div id='features'><HeroSection 
             image={<img src={WholesomeImage} alt='' />}
             heading='Productivity System' 
