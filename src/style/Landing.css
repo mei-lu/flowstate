@@ -1,16 +1,20 @@
 /* Styles for Landing page */
-/* .landing {
-    margin-top: 20rem;
-} */
+.landing {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    box-sizing: border-box;
+}
 
 /* Hero Section */
 .hero-section {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     width: 100%;
     padding: .5rem;
     box-sizing: border-box;
+    margin: 0 5rem;
 }
 
 .hero-heading {
@@ -23,5 +27,5 @@
 }
 
 .hero-image {
-    width: 35rem;
+    width: 40rem;
 }

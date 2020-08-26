@@ -62,7 +62,7 @@
 
   /* Public Nav Bar */
 .landing-nav {
-  position: fixed;
+  position: absolute;
   padding: .5rem;
   box-sizing: border-box;
   display: flex;
