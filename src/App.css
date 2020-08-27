@@ -7,10 +7,6 @@
 @import './style/Landing.css';
 @import './style/CommonVars.css';
 
-body > #root > div {
-  width: 100vw;
-}
-
 .App {
   text-align: center;
   background: rgb(255, 255, 255);
