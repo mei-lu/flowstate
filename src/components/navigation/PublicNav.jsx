@@ -11,7 +11,7 @@ const PublicNav = (props) => {
             <div className='landing-nav-labels-wrapper'>
                 <div className='landing-nav-labels'><a href='#features'>Features</a></div>
                 <div className='landing-nav-labels'><a href='#about'>About</a></div>
-                <div className='landing-nav-labels'><a href='#contact'>Contact</a></div>
+                <div className='landing-nav-labels'><a href='#source'>Source</a></div>
                 <div className='landing-nav-labels'>
                     <Link to='/login'><button className='landing-nav-button-solid'>Login</button></Link>
                     <Link to='/signup'><button className='landing-nav-button-outlined'>Sign Up</button></Link>
