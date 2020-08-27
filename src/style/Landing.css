@@ -15,6 +15,7 @@
     align-items: center;
     justify-content: space-between;
     overflow-x: hidden;
+    margin-bottom: 2rem;
 }
   
 .landing-nav-labels-wrapper {
