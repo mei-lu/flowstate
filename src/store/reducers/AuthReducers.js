@@ -2,6 +2,7 @@ import * as ActionTypes from '../actions/ActionTypes';
 
 export const defaultState = {
     isAuthenticated: false,
+    isLoading: false
 }
 
 export const AuthReducer = (state = defaultState, action) => {
@@ -9,16 +10,23 @@ export const AuthReducer = (state = defaultState, action) => {
         case ActionTypes.LOGIN_SUCCESS:
             return {
                 ...state,
-                isAuthenticated: true
+                isAuthenticated: true,
+                isLoading: false
             }
         case ActionTypes.LOGIN_FAILURE:
             return {
                 ...state,
-                isAuthenticated: false
+                isAuthenticated: false,
+                isLoading: false
+            }
+        case ActionTypes.LOADING:
+            return {
+                ...state,
+                isLoading: true
             }
         default: return {
             ...state,
-            isAuthenticated: false
+            isAuthenticated: false,
         }
     }
 }

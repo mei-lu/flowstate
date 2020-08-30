@@ -1,4 +1,20 @@
 @import './CommonVars.css';
+.task-wrapper {
+  background-color: var(--secondary-bg-color);
+  width: 100%;
+  min-height: 100vh;
+  max-height: 100vh;
+}
+
+.tasks {
+  display: flex;
+  margin-left: 5rem;
+}
+
+.task-heading {
+  text-align: left;
+  margin-left: 5rem;
+}
 
 /* Tasks */
 .column {
@@ -8,21 +24,40 @@
   background-color: var(--secondary-bg-color);
   height: 30rem;
   border-radius: .5rem;
+  padding: .5rem;
+  height: 100%;
 }
 
-.column-name {
+.column-header {
   display: flex;
   justify-content: space-between;
-  background-color: rgb(188, 211, 255);
   border-radius: .5rem .5rem 0 0;
   padding: 1rem;
   width: 15rem;
   margin-bottom: .3rem;
+  align-items: center;
 }
 
-.column-name p {
+.column-name {
   font-size: 1.2rem;
   margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.task-count {
+  background-color: var(--main-color);
+  width: 2rem;
+  height: 2rem;
+  border-radius: 200%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: .5rem;
+}
+
+.column-tasks {
+  overflow: scroll;
 }
 
 /* Task card */

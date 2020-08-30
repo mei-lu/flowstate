@@ -7,6 +7,7 @@ import TimerIcon from '../../img/navigation/timer.svg';
 import LogoutIcon from '../../img/navigation/logout.svg';
 import Context from '../../utils/Context';
 import Auth from '../../utils/Auth';
+import LogoImg from '../../img/logo.svg';
 
 function Navigation () {
     let history = useHistory();
@@ -14,7 +15,7 @@ function Navigation () {
     
     return(
         <div className='nav'>
-            {/* <div className='logo'><Logo/></div> */}
+            <img className='logo-img' src={LogoImg} alt=''/>
             <Link to='/dashboard'><img className='nav-icons' src={DashboardIcon} alt=''/></Link>
             <Link to='/tasks'><img className='nav-icons' src={TasksIcon} alt=''/></Link>
             <Link to='/schedule'><img className='nav-icons' src={CalendarIcon} alt=''/></Link>

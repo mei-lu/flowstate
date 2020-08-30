@@ -8,12 +8,16 @@ import Auth from './Auth';
 
 const ContextState = (props) => {
     const [authReducer, dispatchAuthReducer] = React.useReducer(AuthReducer.AuthReducer, AuthReducer.defaultState);
+    
+    const verifyUser = React.useCallback(async () => {
+        await Auth.verify(() => handleLogin());
+    }, []);
 
 // Verify if JWT is validated in order to persist users on refresh
   React.useEffect(() => {
-    Auth.verify(()=> {
-      handleLogin();
-    })
+    dispatchAuthReducer(Actions.loading, console.log(authReducer.isLoading));
+    
+    verifyUser();
   }, []);
 
     const handleLogin = () => {
@@ -27,6 +31,7 @@ const ContextState = (props) => {
     return(
         <Context.Provider value={{
             authState: authReducer.isAuthenticated,
+            loadingState: authReducer.isLoading,
             handleLogin: () => handleLogin(),
             handleLogout: () => handleLogout()
         }}>

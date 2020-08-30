@@ -68,7 +68,7 @@ function Login() {
             <h5>Don't have an account? <Link to='/signup'><b>Sign Up</b></Link></h5>
         </div>
         <div className='auth-sidebar'>
-
+            {/* Todo: Add graphics to sidebar */}
         </div>
     </div>
 }

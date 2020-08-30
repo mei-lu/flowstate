@@ -12,3 +12,9 @@ export const login_failure = () => {
   }
 }
 
+export const loading = () => {
+  return {
+    type: ActionTypes.LOADING
+  }
+}
+

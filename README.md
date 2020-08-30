@@ -3,6 +3,8 @@
 # Flowstate
 Productivity web app inspired by Mihaly Csikszentmihalyi's book *Flow: The Psychology of Optimal Experience*. Combining kanban boards, the pomodoro method, and a point system to make focusing less overwhelming and more fun.
 
+This is the front end repo for Flowstate, app is currently under development! 
+
 ## Features
 - **Pomodoro Timer** - Set focus and break times
 - **Kanban board** - Create columns and drag-able task cards for easy overviews of your tasks
