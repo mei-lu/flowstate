@@ -1,6 +1,4 @@
 import React from 'react';
-import SolidButton from '../assets/SolidButton';
-import { Link } from 'react-router-dom';
 
 const HeroSection = (props) => {
     return (

@@ -1,7 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import SolidButton from '../components/assets/SolidButton';
-import OutlinedButton from '../components/assets/OutlinedButton';
+// import OutlinedButton from '../components/assets/OutlinedButton';
 import PublicNav from '../components/navigation/PublicNav';
 import HeroSection from '../components/landing/HeroSection';
 import WholesomeImage from '../img/landing/wholesome.svg';
@@ -30,7 +29,7 @@ function Landing() {
             image={<img src={WholesomeImage1} alt='' />}
             heading='Source Code' 
             body='See the front end source code!'
-            action={<a href='https://github.com/mei-lu/flowstate' target='_blank'><button className='outlined-button'>View on Github</button></a>} />
+            action={<a href='https://github.com/mei-lu/flowstate' target='_blank' rel='noopener noreferrer'><button className='outlined-button'>View on Github</button></a>} />
         </div>
     </div>
 

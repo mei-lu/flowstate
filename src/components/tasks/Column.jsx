@@ -5,10 +5,10 @@ const Column = (props) => {
     return(
         <div className='column'>
             <div className='column-header'>
-                <p className='column-name'>
+                <div className='column-name'>
                     Priority {props.name}
                     <p className='task-count'>{props.count}3</p>
-                </p>
+                </div>
                 <p>...</p>
             </div>
             <div className='column-tasks'>
