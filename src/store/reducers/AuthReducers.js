@@ -2,7 +2,7 @@ import * as ActionTypes from '../actions/ActionTypes';
 
 export const defaultState = {
     isAuthenticated: false,
-    isLoading: false
+    isLoading: true
 }
 
 export const AuthReducer = (state = defaultState, action) => {

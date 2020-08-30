@@ -8,16 +8,10 @@ import Auth from './Auth';
 
 const ContextState = (props) => {
     const [authReducer, dispatchAuthReducer] = React.useReducer(AuthReducer.AuthReducer, AuthReducer.defaultState);
-    
-    const verifyUser = React.useCallback(async () => {
-        await Auth.verify(() => handleLogin());
-    }, []);
 
 // Verify if JWT is validated in order to persist users on refresh
   React.useEffect(() => {
-    dispatchAuthReducer(Actions.loading, console.log(authReducer.isLoading));
-    
-    verifyUser();
+    Auth.verify(() => handleLogin());
   }, []);
 
     const handleLogin = () => {
