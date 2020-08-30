@@ -16,6 +16,19 @@ This is the front end repo for Flowstate, app is currently under development!
 - **Habits** - Set recurring tasks which automatically populate your kanban board
 - **Point System** - Get points daily for focus time and completed tasks (like Github contributions!)
 
+## Made With
+**Front End**
+- React
+- React useReducer hook
+- Greensock Animation Library (GSAP)
+
+**Back End**
+- Node.js
+- Express
+- JWT
+- MongoDB
+
+
 ## Author's Note
-This project helped me realize my goal of creating a full stack web app (while trying to use best practices). I think that I should always make projects that are interesting,  useful, and fun with good UI/UX. Thus, I decided to have a go at a productivity app as it's one of my interests. 
+This project helped me realize my goal of creating a full stack web app (while trying to use best practices). I think that I should always make projects that are interesting, useful, and fun with good UI/UX. Thus, I decided to have a go at a fresh take on productivity apps as it's one of my interests. 
 I hope this project is unique and effective to all who use it!

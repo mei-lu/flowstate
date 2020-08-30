@@ -11,7 +11,7 @@ const ContextState = (props) => {
 
 // Verify if JWT is validated in order to persist users on refresh
   React.useEffect(() => {
-    Auth.verify(() => handleLogin());
+    Auth.verify(() => handleLogout(), () => handleLogin());
   }, []);
 
     const handleLogin = () => {
@@ -19,7 +19,7 @@ const ContextState = (props) => {
     }
 
     const handleLogout = () => {
-        dispatchAuthReducer(Actions.login_failure);
+        dispatchAuthReducer(Actions.login_failure());
     }
  
     return(

@@ -24,7 +24,7 @@ class Auth {
         })
     }
 
-    verify = (callback) => {
+    verify = (handleFailure, callback) => {
         fetch(`${process.env.REACT_APP_API_BASE}/api/verifyuser`, {
             method: 'GET',
             credentials: 'include',
@@ -36,6 +36,8 @@ class Auth {
           .then(async response => {
             if (response.ok) {
                 callback();
+            } else {
+                handleFailure();
             }
           })
           
