@@ -15,6 +15,8 @@ This is the front end repo for Flowstate, app is currently under development!
 - **Streaks** - Count number of days where you've earned points for being productive
 - **Habits** - Set recurring tasks which automatically populate your kanban board
 - **Point System** - Get points daily for focus time and completed tasks (like Github contributions!)
+- **Google Calendar Integration** - View your events right from Flowstate
+- **Desktop Notifications** - Get reminded about events and tasks
 
 ## 💮 Made With
 **Front End**

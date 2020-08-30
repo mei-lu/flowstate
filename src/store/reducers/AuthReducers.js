@@ -19,11 +19,6 @@ export const AuthReducer = (state = defaultState, action) => {
                 isAuthenticated: false,
                 isLoading: false
             }
-        case ActionTypes.LOADING:
-            return {
-                ...state,
-                isLoading: true
-            }
         default: return {
             ...state,
             isAuthenticated: false,

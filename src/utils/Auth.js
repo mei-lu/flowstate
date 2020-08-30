@@ -24,7 +24,7 @@ class Auth {
         })
     }
 
-    verify = (handleFailure, callback) => {
+    verify = (handleFailure, handleSuccess) => {
         fetch(`${process.env.REACT_APP_API_BASE}/api/verifyuser`, {
             method: 'GET',
             credentials: 'include',
@@ -33,14 +33,31 @@ class Auth {
               'Accept': 'application/json',
             }
           })
-          .then(async response => {
+          .then(response => {
             if (response.ok) {
-                callback();
+                handleSuccess();
             } else {
-                handleFailure();
+                this.requestRefreshToken(() => handleFailure(), () => handleSuccess());
             }
           })
           
+    }
+
+    requestRefreshToken = (handleFailure, handleSuccess) => {
+        fetch(`${process.env.REACT_APP_API_BASE}/api/refreshtoken`, {
+            method: 'POST',
+            credentials: 'include',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            }
+        }).then(status => {
+            if (status.ok) {
+                handleSuccess();
+            } else {
+                handleFailure();
+            }
+        })
     }
 
     logout(callback) {
